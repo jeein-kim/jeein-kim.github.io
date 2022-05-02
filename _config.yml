@@ -3,7 +3,7 @@ title: Poole
 tagline: The Jekyll Butler
 url: http://jeein-kim.github.io
 paginate: 1
-baseurl: /temp2
+baseurl: /temp
 permalink: pretty
 
 # Gems
