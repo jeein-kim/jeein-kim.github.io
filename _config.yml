@@ -1,9 +1,9 @@
 # Setup
 title: Poole
 tagline: The Jekyll Butler
-url: https://jeein-kim.github.io
+url: http://jeein-kim.github.io/temp2/
 paginate: 1
-baseurl: /temp2
+baseurl: ""
 permalink: pretty
 
 # Gems
