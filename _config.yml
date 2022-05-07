@@ -33,9 +33,9 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: Mark Otto
-  url: https://twitter.com/mdo
-  email: markdotto@gmail.com
+  name: Jeein Kim
+  url: https://jeein-kim.github.io
+  email: jeeinkim@yonsei.ac.kr
 
 # Custom vars
 version: 3.0.0
