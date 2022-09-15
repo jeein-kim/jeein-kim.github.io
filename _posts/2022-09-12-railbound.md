@@ -15,7 +15,7 @@ title: railbound
 
 
 
------
+
 
 추석 연휴를 끝내주게 보내기 위해 스팀 탐방 중 발견한 레일바운드.  
 뒤로 갈수록 난이도가 어려워진다.  
@@ -49,7 +49,7 @@ title: railbound
 
 ### **Spoliers!** 
 Don't scroll down if you don't want any spoliers.
-
+{: .message }
 
 
 .  
@@ -76,7 +76,7 @@ Don't scroll down if you don't want any spoliers.
 
 너무 쉬운 라운드는 빼고, 직관적으로 풀이 가능한 라운드도 빼고. 한 번에 풀지 못했던 라운드 몇가지를 첨부한다.
 
-I might not have perfect solution, but I know somebody will really need it.  
+I might not have a simplest solution, but I know somebody will really need it.  
 However, if you refer to the solution, the fun is halved.  
 **So make sure to try/think enough before you refer to it!!**
 
@@ -85,22 +85,22 @@ However, if you refer to the solution, the fun is halved.
   
   
   
-## 1-14A
+### 1-14A
 ![20220912101000_1](https://user-images.githubusercontent.com/63774418/190317895-c72444a0-f50a-47d7-8f52-9b64659fe7a3.jpg)
 
 1st round.
 FYI, the rounds with an alphabet letter are the bonus rounds.
 
-## 2-3B
+### 2-3B
 ![20220912160644_1](https://user-images.githubusercontent.com/63774418/190317928-51228c5b-1498-4ed7-978f-273544d8817d.jpg)
 
-## 2-4A
+### 2-4A
 ![20220912103043_1](https://user-images.githubusercontent.com/63774418/190317911-f301d324-037f-45ce-92c3-c1c9bddf251f.jpg)
 
-## 3-10C
+### 3-10C
 ![20220912161101_1](https://user-images.githubusercontent.com/63774418/190317932-cd0863a4-ec66-4294-aa84-7637e88f5f0f.jpg)
 
-## 4-6B
+### 4-6B
 ![20220912152416_1](https://user-images.githubusercontent.com/63774418/190317927-7e6fb1b4-d800-4804-aa4c-361f359e1d17.jpg)
 
 ## 5-5
@@ -134,6 +134,6 @@ FYI, the rounds with an alphabet letter are the bonus rounds.
     
     
     
-enjoy!
+enjoy! :)
   
   
