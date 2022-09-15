@@ -4,13 +4,18 @@ title: railbound
 ---
 
 
-##Radilbound by Afterburn
+-----
+
+## Radilbound by Afterburn
 
 레일바운드 솔루션 (selected)
 
-<p aligh="center">
-  <img src="https://user-images.githubusercontent.com/63774418/190320297-0b39118b-28d9-4acc-8d92-972865902978.jpg" />
-</p>
+<img align="center" width="33%" src="[https://i.stack.imgur.com/RJj4x.png](https://user-images.githubusercontent.com/63774418/190320714-7afc1328-88df-4fdf-b806-120e6cd4ca00.jpg)">  
+
+
+![capsule_616x353](https://user-images.githubusercontent.com/63774418/190320714-7afc1328-88df-4fdf-b806-120e6cd4ca00.jpg)
+
+
 
 
 -----
@@ -24,42 +29,51 @@ title: railbound
 
 
   
-  
-  
-  
-  
-  
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
 
+-----
 
 * Spoliers! 
 Don't scroll down if you don't want any spoliers.
 
+-----
 
-.
-.
-.
-.
-.
-.
-.
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+
 
 ## Solution for somebody
 
