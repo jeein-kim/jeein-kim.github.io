@@ -4,7 +4,10 @@ title: railbound
 ---
 
 
-*Radilbound by Afterburn
+##Radilbound by Afterburn
+레일바운드 솔루션 (selected)
+
+
 https://store.steampowered.com/app/1967510/Railbound/![image](https://user-images.githubusercontent.com/63774418/190316789-93c6e464-7269-4928-8cb1-901bd8565e68.png)
 
 -----
@@ -17,16 +20,12 @@ https://store.steampowered.com/app/1967510/Railbound/![image](https://user-image
 이거… 다 풀고 업적 다 모으려면 꽤나 걸릴 듯 하다.
 
 
-.\n
-.\n
-.\n
-.\n
-.\n
-.\n
-.\n
-.\n
-.\n
-.
+
+
+
+
+
+
 .
 .
 .
