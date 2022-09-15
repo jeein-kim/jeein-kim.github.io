@@ -5,10 +5,11 @@ title: railbound
 
 
 ##Radilbound by Afterburn
+
 레일바운드 솔루션 (selected)
 
+![capsule_616x353](https://user-images.githubusercontent.com/63774418/190320297-0b39118b-28d9-4acc-8d92-972865902978.jpg)
 
-https://store.steampowered.com/app/1967510/Railbound/![image](https://user-images.githubusercontent.com/63774418/190316789-93c6e464-7269-4928-8cb1-901bd8565e68.png)
 
 -----
 
@@ -20,33 +21,36 @@ https://store.steampowered.com/app/1967510/Railbound/![image](https://user-image
 이거… 다 풀고 업적 다 모으려면 꽤나 걸릴 듯 하다.
 
 
+  
+  
+  
+  
+  
+  
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
 
 
-
-
-
-
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
 * Spoliers! 
 Don't scroll down if you don't want any spoliers.
 
+
 .
 .
 .
@@ -54,6 +58,7 @@ Don't scroll down if you don't want any spoliers.
 .
 .
 .
+
 ## Solution for somebody
 
 너무 쉬운 라운드는 빼고, 직관적으로 풀이 가능한 라운드도 빼고. 한 번에 풀지 못했던 라운드 몇가지를 첨부한다.
