@@ -8,7 +8,9 @@ title: railbound
 
 레일바운드 솔루션 (selected)
 
-![capsule_616x353](https://user-images.githubusercontent.com/63774418/190320297-0b39118b-28d9-4acc-8d92-972865902978.jpg)
+<p aligh="center">
+  <img src="https://user-images.githubusercontent.com/63774418/190320297-0b39118b-28d9-4acc-8d92-972865902978.jpg" />
+</p>
 
 
 -----
