@@ -8,14 +8,10 @@ title: railbound
 
 ## Radilbound by Afterburn
 
-레일바운드 솔루션 (selected)
+**레일바운드 솔루션 (selected)**
 
-<!-- <img align="center" width="33%" src="[https://i.stack.imgur.com/RJj4x.png](https://user-images.githubusercontent.com/63774418/190320714-7afc1328-88df-4fdf-b806-120e6cd4ca00.jpg)">  
- -->
-
-<!-- ![capsule_616x353](https://user-images.githubusercontent.com/63774418/190320714-7afc1328-88df-4fdf-b806-120e6cd4ca00.jpg) -->
-
-![c](https://user-images.githubusercontent.com/63774418/190320714-7afc1328-88df-4fdf-b806-120e6cd4ca00.jpg)
+  
+![capsule_616x353](https://user-images.githubusercontent.com/63774418/190320714-7afc1328-88df-4fdf-b806-120e6cd4ca00.jpg)
 
 
 
@@ -49,12 +45,12 @@ title: railbound
 .  
 .  
 
------
 
-* Spoliers! 
+
+**Spoliers!** 
 Don't scroll down if you don't want any spoliers.
 
------
+
 
 .  
 .  
@@ -81,10 +77,11 @@ Don't scroll down if you don't want any spoliers.
 너무 쉬운 라운드는 빼고, 직관적으로 풀이 가능한 라운드도 빼고. 한 번에 풀지 못했던 라운드 몇가지를 첨부한다.
 
 I might not have perfect solution, but I know somebody will really need it.  
-However, if you refer to the solution, the fun is halved. **So make sure to try/think enough before you refer to it!!
+However, if you refer to the solution, the fun is halved.  
+**So make sure to try/think enough before you refer to it!!**
 
 참고로 뒤에 알파벳이 붙은 건 보너스라운드이다.  
-**솔루션을 참고하면 재미가 반감되니, 충분히 시도해보고 그래도 막힌다 싶을 때 참고하시길!
+**솔루션을 참고하면 재미가 반감되니, 충분히 시도해보고 그래도 막힌다 싶을 때 참고하시길!**
   
   
   
