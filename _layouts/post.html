@@ -15,11 +15,12 @@ layout: default
     {% for post in site.related_posts limit:1 %}
       <li>
         <a href="{{ site.baseurl }}">
+          <p>Home<p>
           <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
         </a>
         <a href="{{ site.baseurl }}{{ post.url }}">
           {{ post.title }}
-          <p>For<p>
+<!--           <p>For<p> -->
 <!--           [return](https://jeein-kim.github.io/) -->
           <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
         </a>
