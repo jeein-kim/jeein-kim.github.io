@@ -12,7 +12,16 @@ layout: default
 <aside class="related">
   <h3>Return</h3>
   <ul class="related-posts">
-    [return](https://jeein-kim.github.io/)
+    {% for post in site.related_posts limit:1 %}
+      <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          {{ post.title }}
+          <p>For<p>
+<!--           [return](https://jeein-kim.github.io/) -->
+          <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
+        </a>
+      </li>
+    {% endfor %}
   </ul>
 </aside>
 {% endif %}
