@@ -168,3 +168,44 @@
 		}
 
 	}
+
+/* --- Contact icon labels ---------------------------------------------------
+   main.css hides .label outright (display: none), which also hides it from
+   screen readers. Show it under the icon on hover/focus instead: kept in the
+   layer but transparent, so it stays in the accessibility tree. */
+
+	#third ul.icons {
+		margin-bottom: 3em;
+	}
+
+	#third ul.icons li {
+		position: relative;
+	}
+
+		#third ul.icons li a .label {
+			display: block;
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			-moz-transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			transform: translateX(-50%);
+			margin-top: 0.6em;
+			font-size: 0.7em;
+			line-height: 1;
+			letter-spacing: 0;
+			color: #999999;
+			white-space: nowrap;
+			pointer-events: none;
+			opacity: 0;
+			-moz-transition: opacity 0.2s ease;
+			-webkit-transition: opacity 0.2s ease;
+			-ms-transition: opacity 0.2s ease;
+			transition: opacity 0.2s ease;
+		}
+
+		#third ul.icons li a:hover .label,
+		#third ul.icons li a:focus .label {
+			opacity: 1;
+		}
