@@ -344,3 +344,36 @@
 			}
 
 	}
+
+/* --- CV entry lists --------------------------------------------------------
+   Presentation Record rows: the name on the left, the venue and date pushed
+   out to the right rather than trailing in parentheses. The meta column keeps
+   its own line on narrow screens, where there is no room to sit alongside. */
+
+	.cv-page #main ul.cv-entries li {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		gap: 1.5em;
+	}
+
+		.cv-page #main .entry-meta {
+			flex: 0 0 auto;
+			text-align: right;
+			color: #909090;
+			font-size: 0.9em;
+		}
+
+	@media screen and (max-width: 736px) {
+
+		.cv-page #main ul.cv-entries li {
+			display: block;
+		}
+
+			.cv-page #main .entry-meta {
+				display: block;
+				text-align: left;
+				margin-top: 0.25em;
+			}
+
+	}
