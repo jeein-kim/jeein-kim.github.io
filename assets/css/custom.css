@@ -1,7 +1,128 @@
-/* Image-based icons (e.g. NASA ADS) in ul.icons.
-   These have no Font Awesome glyph, so their inline-block baseline would sit
-   higher than the icons around them; aligning every item to the top removes the
-   dependency on a glyph baseline (all items are the same height). */
+/* ==========================================================================
+   Custom overrides for the Stellar template.
+   Loaded after main.css, so equal-specificity rules here win.
+   ========================================================================== */
+
+/* --- Light theme -----------------------------------------------------------
+   main.css themes the page as light text on a purple gradient. Everything
+   below repaints that top-level (header/footer) scope for a white background.
+   #main and #nav carry their own scoped colours and are handled further down. */
+
+	body {
+		background-color: #ffffff;
+		background-image: none;
+		color: #333333;
+	}
+
+	h1, h2, h3, h4, h5, h6,
+	strong, b,
+	dl dt,
+	table th,
+	label,
+	a:hover {
+		color: #000000;
+	}
+
+	hr {
+		border-bottom-color: rgba(0, 0, 0, 0.15);
+	}
+
+	blockquote {
+		border-left-color: rgba(0, 0, 0, 0.15);
+	}
+
+	ul.alt li {
+		border-top-color: rgba(0, 0, 0, 0.15);
+	}
+
+	.icon.alt {
+		border-color: rgba(0, 0, 0, 0.2);
+		color: #333333;
+	}
+
+		.icon.alt:hover {
+			background-color: rgba(0, 0, 0, 0.04);
+		}
+
+		.icon.alt:active {
+			background-color: rgba(0, 0, 0, 0.1);
+		}
+
+	.icon.major {
+		border-color: rgba(0, 0, 0, 0.2);
+	}
+
+/* Darken the greys main.css uses inside the content and nav panels, so the
+   text weight is consistent with the header and footer above. */
+
+	#main,
+	#main input, #main select, #main textarea,
+	#main a:hover,
+	#nav,
+	#nav a:hover {
+		color: #333333;
+	}
+
+	#main h1, #main h2, #main h3, #main h4, #main h5, #main h6,
+	#main strong, #main b,
+	#main dl dt,
+	#nav h1, #nav h2, #nav h3, #nav h4, #nav h5, #nav h6,
+	#nav strong, #nav b {
+		color: #000000;
+	}
+
+	#main .icon.alt {
+		color: #333333;
+	}
+
+/* --- Header ---------------------------------------------------------------- */
+
+/* No entrance animation: main.css fades #header.alt children in from opacity 0
+   (and spins the logo) once main.js drops the .is-preload class. Pin them to
+   their final state in both phases so the header is simply there on load. */
+
+	#header.alt > *,
+	body.is-preload #header.alt > * {
+		opacity: 1;
+		-moz-transition: none;
+		-webkit-transition: none;
+		-ms-transition: none;
+		transition: none;
+	}
+
+	#header.alt .header-image,
+	body.is-preload #header.alt .header-image {
+		-moz-transform: none;
+		-webkit-transform: none;
+		-ms-transform: none;
+		transform: none;
+	}
+
+	.header-image {
+		display: block;
+		margin: 0 0 1.5em 0;
+	}
+
+		.header-image img {
+			display: block;
+			width: 100%;
+			height: clamp(180px, 30vw, 340px);
+			-o-object-fit: cover;
+			object-fit: cover;
+			/* the dish sits above centre; bias the crop upward to keep it whole */
+			-o-object-position: center 40%;
+			object-position: center 40%;
+			border-radius: 0.25em;
+		}
+
+	#header.alt h1 {
+		font-size: 2em;
+	}
+
+/* --- NASA ADS icon ---------------------------------------------------------
+   No Font Awesome glyph exists for ADS, so it is drawn through the same
+   .icon.alt:before box the neighbouring icons use. ul.icons items are aligned
+   to the top because an icon with no glyph has no text baseline to align on. */
 
 	ul.icons li {
 		vertical-align: top;
@@ -15,6 +136,35 @@
 		background-size: 62% 62%;
 	}
 
-#header h1 {
-    font-size: 2em;
-}
+/* --- Education list --------------------------------------------------------
+   main.css lays dl.alt out with a 3em floated term column, sized for short
+   labels like "Email". Degree names need a wider column, and the block needs
+   to be left-aligned inside its centred (.special) section. */
+
+	#second dl.alt {
+		max-width: 32em;
+		margin: 0 auto;
+		text-align: left;
+	}
+
+		#second dl.alt dt {
+			width: 12em;
+		}
+
+		#second dl.alt dd {
+			margin-left: 13em;
+		}
+
+	@media screen and (max-width: 736px) {
+
+		#second dl.alt dt {
+			float: none;
+			width: auto;
+			margin: 0 0 0.25em 0;
+		}
+
+		#second dl.alt dd {
+			margin-left: 0;
+		}
+
+	}
