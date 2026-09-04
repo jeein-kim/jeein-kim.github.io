@@ -220,3 +220,68 @@
 		opacity: 0.75;
 		line-height: 1.4;
 	}
+
+/* --- Contact details -------------------------------------------------------
+   Same problem as the Education list: dl.alt floats a 3em term column, too
+   narrow for "Address", and .special centres its text. Give the terms room
+   and left-align the block inside the centred section. */
+
+	#third dl.alt {
+		max-width: 26em;
+		margin: 2em auto 0 auto;
+		text-align: left;
+	}
+
+		#third dl.alt dt {
+			width: 5em;
+		}
+
+		#third dl.alt dd {
+			margin-left: 6em;
+		}
+
+	@media screen and (max-width: 736px) {
+
+		#third dl.alt dt {
+			float: none;
+			width: auto;
+			margin: 0 0 0.25em 0;
+		}
+
+		#third dl.alt dd {
+			margin-left: 0;
+		}
+
+	}
+
+/* --- CV page ---------------------------------------------------------------
+   cv.html leans on dl.alt for the contact block, education and skills, where
+   the terms ("2021 - present", "Programming") are far wider than the 3em
+   column main.css floats them into. Widen the column, and stack it on narrow
+   screens like the lists on the home page. */
+
+	.cv-page #main dl.alt dt {
+		width: 10em;
+	}
+
+	.cv-page #main dl.alt dd {
+		margin-left: 11em;
+	}
+
+	.cv-page #main h3 {
+		margin-top: 2em;
+	}
+
+	@media screen and (max-width: 736px) {
+
+		.cv-page #main dl.alt dt {
+			float: none;
+			width: auto;
+			margin: 0 0 0.25em 0;
+		}
+
+		.cv-page #main dl.alt dd {
+			margin-left: 0;
+		}
+
+	}
