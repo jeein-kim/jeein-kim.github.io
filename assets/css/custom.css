@@ -209,3 +209,14 @@
 		#third ul.icons li a:focus .label {
 			opacity: 1;
 		}
+
+/* --- Degree minor ----------------------------------------------------------
+   Second line inside the Education term column: same column, but set smaller
+   and lighter so the degree name stays the primary label. */
+
+	.degree-minor {
+		display: block;
+		font-size: 0.8em;
+		opacity: 0.75;
+		line-height: 1.4;
+	}
