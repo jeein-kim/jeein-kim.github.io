@@ -285,3 +285,62 @@
 		}
 
 	}
+
+/* --- Research figures ------------------------------------------------------
+   Replaces the template's three-column .features grid. Each entry is one row
+   in a vertical stack: the figure beside its text, rather than three icons
+   side by side. The stock .spotlight is no use here -- it crops its image to
+   a 16em circle, which would destroy a plot. Sections marked .special centre
+   their text, so the rows opt back out. */
+
+	#first .research-list {
+		text-align: left;
+	}
+
+	#first .research-item {
+		display: flex;
+		align-items: center;
+		gap: 3em;
+		margin: 0 0 4em 0;
+	}
+
+		#first .research-item:last-child {
+			margin-bottom: 0;
+		}
+
+		#first .research-figure {
+			flex: 0 0 58%;
+			min-width: 0;
+		}
+
+			#first .research-figure img {
+				display: block;
+				width: 100%;
+				height: auto;
+				border-radius: 0;
+			}
+
+		#first .research-text {
+			flex: 1;
+			min-width: 0;
+		}
+
+			#first .research-text > :last-child {
+				margin-bottom: 0;
+			}
+
+	@media screen and (max-width: 980px) {
+
+		#first .research-item {
+			flex-direction: column;
+			gap: 1.5em;
+			margin-bottom: 3em;
+		}
+
+			#first .research-figure,
+			#first .research-text {
+				flex: 0 1 auto;
+				width: 100%;
+			}
+
+	}
