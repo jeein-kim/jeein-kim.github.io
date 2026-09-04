@@ -377,3 +377,28 @@
 			}
 
 	}
+
+/* --- CV tables -------------------------------------------------------------
+   Proposal titles are long enough that at the body size the columns wrap into
+   an awkward shape, so set the proposal tables a size down and let the title
+   column take the slack. The course level sits beside its course as a quiet
+   second line. */
+
+	.cv-page #main #proposals table {
+		font-size: 0.85em;
+	}
+
+		.cv-page #main #proposals table th,
+		.cv-page #main #proposals table td:nth-child(1),
+		.cv-page #main #proposals table td:nth-child(2),
+		.cv-page #main #proposals table td:nth-child(4),
+		.cv-page #main #proposals table td:nth-child(5) {
+			white-space: nowrap;
+		}
+
+	.cv-page #main .course-level {
+		display: block;
+		font-size: 0.8em;
+		color: #909090;
+		margin-top: 0.15em;
+	}
