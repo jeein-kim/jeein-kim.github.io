@@ -1,0 +1,16 @@
+/* Image-based icons (e.g. NASA ADS) in ul.icons.
+   These have no Font Awesome glyph, so their inline-block baseline would sit
+   higher than the icons around them; aligning every item to the top removes the
+   dependency on a glyph baseline (all items are the same height). */
+
+	ul.icons li {
+		vertical-align: top;
+	}
+
+	.icon.alt.icon-ads:before {
+		content: '';
+		background-image: url('../../images/ads.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 62% 62%;
+	}
