@@ -106,12 +106,12 @@
 		.header-image img {
 			display: block;
 			width: 100%;
-			height: clamp(180px, 30vw, 340px);
+			height: clamp(220px, 40vw, 480px);
 			-o-object-fit: cover;
 			object-fit: cover;
 			/* the dish sits above centre; bias the crop upward to keep it whole */
-			-o-object-position: center 40%;
-			object-position: center 40%;
+			-o-object-position: center 45%;
+			object-position: center 45%;
 			border-radius: 0.25em;
 		}
 
