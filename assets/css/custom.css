@@ -268,8 +268,25 @@
 		margin-left: 11em;
 	}
 
+	.cv-page #main h2 {
+		display: inline-block;
+		background-color: #f1e6f0;
+		color: #7a4a74;
+		padding: 0.2em 0.75em;
+		border-radius: 0.25em;
+	}
+
 	.cv-page #main h3 {
+		display: inline-block;
+		background-color: #faf5fa;
+		color: #935d8c;
+		padding: 0.15em 0.6em;
+		border-radius: 0.25em;
 		margin-top: 2em;
+	}
+
+	.cv-page #main .tag-o {
+		color: #935d8c;
 	}
 
 	@media screen and (max-width: 736px) {
@@ -392,8 +409,8 @@
 /* --- CV tables -------------------------------------------------------------
    Proposal titles are long enough that at the body size the columns wrap into
    an awkward shape, so set the proposal tables a size down and let the title
-   column take the slack. The course level sits beside its course as a quiet
-   second line. */
+   column take the slack. The course level sits inline next to its course
+   name, in a quieter, smaller font. */
 
 	.cv-page #main #proposals table {
 		font-size: 0.85em;
@@ -408,19 +425,25 @@
 		}
 
 	.cv-page #main .course-level {
-		display: block;
 		font-size: 0.8em;
 		color: #909090;
-		margin-top: 0.15em;
 	}
 
 /* --- TA table ---------------------------------------------------------------
    Sized down like the proposal tables above -- TA experience is a minor line
-   item and doesn't need body-text-sized rows. */
+   item and doesn't need body-text-sized rows. Role is the same repeated
+   value in every row, so shrink it to its content and let Course take the
+   freed-up width. */
 
 	.cv-page #main #ta table {
 		font-size: 0.85em;
 	}
+
+		.cv-page #main #ta table th:nth-child(3),
+		.cv-page #main #ta table td:nth-child(3) {
+			width: 1%;
+			white-space: nowrap;
+		}
 
 /* --- Section note -----------------------------------------------------------
    Small print below a list, e.g. explaining the [O]/[P] markers in the
