@@ -291,54 +291,65 @@
    in a vertical stack: the figure beside its text, rather than three icons
    side by side. The stock .spotlight is no use here -- it crops its image to
    a 16em circle, which would destroy a plot. Sections marked .special centre
-   their text, so the rows opt back out. */
+   their text, so the rows opt back out. Shared between the homepage's Research
+   teaser (#first) and the full writeup on research.html (.research-page). */
 
-	#first .research-list {
+	#first .research-list,
+	.research-page .research-list {
 		text-align: left;
 	}
 
-	#first .research-item {
+	#first .research-item,
+	.research-page .research-item {
 		display: flex;
 		align-items: center;
 		gap: 3em;
 		margin: 0 0 4em 0;
 	}
 
-		#first .research-item:last-child {
+		#first .research-item:last-child,
+		.research-page .research-item:last-child {
 			margin-bottom: 0;
 		}
 
-		#first .research-figure {
+		#first .research-figure,
+		.research-page .research-figure {
 			flex: 0 0 58%;
 			min-width: 0;
 		}
 
-			#first .research-figure img {
+			#first .research-figure img,
+			.research-page .research-figure img {
 				display: block;
 				width: 100%;
 				height: auto;
 				border-radius: 0;
 			}
 
-		#first .research-text {
+		#first .research-text,
+		.research-page .research-text {
 			flex: 1;
 			min-width: 0;
 		}
 
-			#first .research-text > :last-child {
+			#first .research-text > :last-child,
+			.research-page .research-text > :last-child {
 				margin-bottom: 0;
 			}
 
 	@media screen and (max-width: 980px) {
 
-		#first .research-item {
+		#first .research-item,
+		.research-page .research-item {
 			flex-direction: column;
 			gap: 1.5em;
 			margin-bottom: 3em;
 		}
 
 			#first .research-figure,
-			#first .research-text {
+			#first .research-text,
+			.research-page .research-figure,
+			.research-page .research-text {
 				flex: 0 1 auto;
 				width: 100%;
 			}
