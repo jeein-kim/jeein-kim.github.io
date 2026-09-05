@@ -280,6 +280,17 @@
 		color: #935d8c;
 	}
 
+/* --- Hidden marker -----------------------------------------------------------
+   A link with no visible affordance -- white on white, so it blends into the
+   page rather than being cut from the layout entirely. */
+
+	.cv-page #main .hidden-marker,
+	.cv-page #main .hidden-marker:hover {
+		color: #ffffff;
+		text-decoration: none;
+		margin-left: 0.35em;
+	}
+
 	@media screen and (max-width: 736px) {
 
 		.cv-page #main dl.alt dt {
