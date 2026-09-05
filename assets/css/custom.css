@@ -413,3 +413,21 @@
 		color: #909090;
 		margin-top: 0.15em;
 	}
+
+/* --- TA table ---------------------------------------------------------------
+   Sized down like the proposal tables above -- TA experience is a minor line
+   item and doesn't need body-text-sized rows. */
+
+	.cv-page #main #ta table {
+		font-size: 0.85em;
+	}
+
+/* --- Section note -----------------------------------------------------------
+   Small print below a list, e.g. explaining the [O]/[P] markers in the
+   Seminars & informal talks list. */
+
+	.cv-page #main .section-note {
+		font-size: 0.8em;
+		color: #909090;
+		margin-top: 0.75em;
+	}
