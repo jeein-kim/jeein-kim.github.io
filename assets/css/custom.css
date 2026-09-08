@@ -418,11 +418,24 @@
 		gap: 1.5em;
 	}
 
+		.cv-page #main .entry-name {
+			flex: 1 1 auto;
+		}
+
 		.cv-page #main .entry-meta {
 			flex: 0 0 auto;
 			text-align: right;
 			color: #909090;
 			font-size: 0.9em;
+		}
+
+		/* Talk title, kept on its own line under the venue name. */
+		.cv-page #main .entry-title {
+			display: block;
+			margin-top: 0.15em;
+			color: #a0a0a0;
+			font-size: 0.9em;
+			font-style: italic;
 		}
 
 	@media screen and (max-width: 736px) {

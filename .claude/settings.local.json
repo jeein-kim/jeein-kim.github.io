@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/jikim/Desktop/others/github_webpage/favicon_io/**)",
+      "Bash(git -C /Users/jikim/Desktop/others/github_webpage/html5up-stellar remote -v)",
+      "Bash(git add *)",
+      "Bash(git commit -q -m ' *)",
+      "Bash(git push *)"
+    ]
+  }
+}
