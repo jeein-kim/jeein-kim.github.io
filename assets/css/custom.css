@@ -866,63 +866,231 @@
 				border-radius: 0.25em;
 			}
 
-/* --- narrow screens: the rail becomes a banner above the content ----------- */
+/* --- tablet and phone: the rail unwraps -------------------------------------
+   Desktop is untouched below 981px and above. Here the identity block becomes
+   a banner, the page content follows it, and the contact block drops to the
+   very bottom of the page -- done by letting #sidebar's children become flex
+   items of #wrapper (display: contents) and ordering them around the content.
+   Type also steps up: the template's base is 12pt at these widths, so the
+   desktop em values land far too small to read. */
 
 	@media screen and (max-width: 980px) {
 
-		.sidebar-layout #sidebar {
-			position: static;
-			width: auto;
-			max-width: none;
-			min-width: 0;
-			padding: 2em 1.5em 1.5em 1.5em;
-			border-right: 0;
-			border-bottom: solid 1px #e4e4e4;
+		.sidebar-layout #wrapper {
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			-moz-flex-direction: column;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
 		}
 
+		/* the rail box itself goes away; its two halves become siblings of the
+		   content so they can sit on either side of it */
+		.sidebar-layout #sidebar {
+			display: contents;
+		}
+
+		.sidebar-layout .sidebar-top {
+			-moz-order: 1;
+			-webkit-order: 1;
+			-ms-order: 1;
+			order: 1;
+			padding: 2em 1.5em 1.5em 1.5em;
+			background-color: #E3E8EA;
+		}
+
+		.sidebar-layout #content,
+		.sidebar-layout #wrapper > #main {
+			-moz-order: 2;
+			-webkit-order: 2;
+			-ms-order: 2;
+			order: 2;
+			margin-left: 0;
+			padding: 2.25em 1.5em 2em 1.5em;
+		}
+
+		.sidebar-layout .sidebar-bottom {
+			-moz-order: 3;
+			-webkit-order: 3;
+			-ms-order: 3;
+			order: 3;
+			margin-top: 0;
+			padding: 2em 1.5em 2em 1.5em;
+			background-color: #E3E8EA;
+			text-align: center;
+		}
+
+/* identity block */
+
 			.side-photo {
-				width: 8.5em;
-				height: 8.5em;
+				width: 9em;
+				height: 9em;
+			}
+
+			.sidebar-layout .side-name {
+				font-size: 1.7em;
 			}
 
 			.side-role {
-				margin-bottom: 1.5em;
+				margin-bottom: 1.4em;
+				font-size: 1em;
 			}
 
-			.side-nav ul {
+/* main nav: one row of equal cells spanning the banner */
+
+			.side-nav > ul {
+				display: -moz-flex;
+				display: -webkit-flex;
+				display: -ms-flex;
+				display: flex;
+				-moz-flex-wrap: wrap;
+				-webkit-flex-wrap: wrap;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
+				gap: 0.4em;
 				text-align: center;
 			}
 
-				.side-nav li {
-					display: inline-block;
-					margin: 0 0.2em;
+				.side-nav > ul > li {
+					-moz-flex: 1 1 0;
+					-webkit-flex: 1 1 0;
+					-ms-flex: 1 1 0;
+					flex: 1 1 0;
+					margin: 0;
 				}
 
-					.side-nav a {
-						padding: 0.5em 1em;
+					.side-nav > ul > li > a {
+						padding: 0.6em 0.5em;
+						font-size: 1.25em;
 					}
 
-			.sidebar-layout .sidebar-bottom {
-				margin-top: 0;
-				padding-top: 1.5em;
-			}
+/* sub nav: forced onto its own full-width row, so it always sits directly
+   under the main-nav row it belongs to */
 
-				/* the heading is flush left against the nav rows on the rail;
-				   in banner mode it sits over centred icons instead */
+				.side-nav .side-sub {
+					-moz-flex: 0 0 100%;
+					-webkit-flex: 0 0 100%;
+					-ms-flex: 0 0 100%;
+					flex: 0 0 100%;
+					-moz-order: 1;
+					-webkit-order: 1;
+					-ms-order: 1;
+					order: 1;
+				}
+
+					.side-nav .side-sub > ul {
+						display: -moz-flex;
+						display: -webkit-flex;
+						display: -ms-flex;
+						display: flex;
+						-moz-flex-wrap: wrap;
+						-webkit-flex-wrap: wrap;
+						-ms-flex-wrap: wrap;
+						flex-wrap: wrap;
+						-moz-justify-content: center;
+						-webkit-justify-content: center;
+						-ms-justify-content: center;
+						justify-content: center;
+						gap: 0.2em 0.6em;
+						margin: 0.5em 0 0 0;
+					}
+
+						.side-nav .side-sub a {
+							padding: 0.4em 0.6em;
+							font-size: 1em;
+						}
+
+/* contact block at the foot of the page */
+
 				.sidebar-layout .sidebar-bottom h2 {
 					padding-left: 0;
+					font-size: 1.05em;
 					text-align: center;
 				}
 
-		.sidebar-layout #content,
+				.sidebar-layout .sidebar-bottom ul.icons {
+					margin-bottom: 1.2em;
+					font-size: 1.05em;
+				}
+
+				.side-address {
+					font-size: 0.85em;
+				}
+
+				.side-credit {
+					margin-top: 1.1em;
+					font-size: 0.8em;
+				}
+
+/* content type: the desktop column is set small for dense reference material;
+   at these widths it needs to come back up */
+
 		.sidebar-layout #wrapper > #main {
-			margin-left: 0;
+			font-size: 1em;
+		}
+
+		.sidebar-layout .about-text p {
+			font-size: 1em;
+		}
+
+		.sidebar-layout #content h2,
+		.sidebar-layout #wrapper > #main h2 {
+			font-size: 1.45em;
+		}
+
+		.sidebar-layout #wrapper > #main h3 {
+			font-size: 1.15em;
+		}
+
+	}
+
+/* --- phone ------------------------------------------------------------------
+   Same shape as the tablet band, one notch tighter so the nav still fits two
+   rows and the banner does not eat the screen. */
+
+	@media screen and (max-width: 736px) {
+
+		.sidebar-layout .sidebar-top {
+			padding: 1.75em 1.25em 1.25em 1.25em;
 		}
 
 		.sidebar-layout #content,
 		.sidebar-layout #wrapper > #main {
-			padding: 2.5em 1.5em 1.5em 1.5em;
+			padding: 2em 1.25em 1.75em 1.25em;
 		}
+
+		.sidebar-layout .sidebar-bottom {
+			padding: 1.75em 1.25em 1.75em 1.25em;
+		}
+
+			.side-photo {
+				width: 7.5em;
+				height: 7.5em;
+			}
+
+			.sidebar-layout .side-name {
+				font-size: 1.5em;
+			}
+
+			.side-role {
+				font-size: 0.95em;
+			}
+
+			.side-nav > ul {
+				gap: 0.3em;
+			}
+
+				.side-nav > ul > li > a {
+					padding: 0.55em 0.35em;
+					font-size: 1.1em;
+				}
+
+					.side-nav .side-sub a {
+						font-size: 0.95em;
+					}
 
 	}
 
