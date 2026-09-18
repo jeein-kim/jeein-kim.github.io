@@ -14,6 +14,16 @@
 		color: #333333;
 	}
 
+/* --- Type ------------------------------------------------------------------
+   Lato for Latin text, in place of the template's Source Sans Pro. Lato has no
+   Hangul, so Noto Sans KR follows it in the stack and picks up the Korean runs
+   (the thesis title) rather than leaving them to whatever each visitor has. */
+
+	body, input, select, textarea,
+	h1, h2, h3, h4, h5, h6 {
+		font-family: "Lato", "Noto Sans KR", Helvetica, sans-serif;
+	}
+
 	h1, h2, h3, h4, h5, h6,
 	strong, b,
 	dl dt,
@@ -136,39 +146,6 @@
 		background-size: 62% 62%;
 	}
 
-/* --- Education list --------------------------------------------------------
-   main.css lays dl.alt out with a 3em floated term column, sized for short
-   labels like "Email". Degree names need a wider column, and the block needs
-   to be left-aligned inside its centred (.special) section. */
-
-	#second dl.alt {
-		max-width: 32em;
-		margin: 0 auto;
-		text-align: left;
-	}
-
-		#second dl.alt dt {
-			width: 12em;
-		}
-
-		#second dl.alt dd {
-			margin-left: 13em;
-		}
-
-	@media screen and (max-width: 736px) {
-
-		#second dl.alt dt {
-			float: none;
-			width: auto;
-			margin: 0 0 0.25em 0;
-		}
-
-		#second dl.alt dd {
-			margin-left: 0;
-		}
-
-	}
-
 /* --- Contact icon labels ---------------------------------------------------
    main.css hides .label outright (display: none), which also hides it from
    screen readers. Show it under the icon on hover/focus instead: kept in the
@@ -257,29 +234,6 @@
 		margin-left: 11em;
 	}
 
-	.cv-page #main h2 {
-		border-left: 4px solid #935d8c;
-		padding-left: 0.6em;
-	}
-
-	.cv-page #main h3 {
-		margin-top: 2em;
-	}
-
-		.cv-page #main h3::before {
-			content: '';
-			display: inline-block;
-			width: 0.55em;
-			height: 0.55em;
-			margin-right: 0.5em;
-			background-color: #c79cc8;
-			vertical-align: middle;
-		}
-
-	.cv-page #main .tag-o {
-		color: #935d8c;
-	}
-
 /* --- Hidden marker -----------------------------------------------------------
    A link with no visible affordance -- white on white, so it blends into the
    page rather than being cut from the layout entirely. */
@@ -340,6 +294,16 @@
 			flex: 1 1 20em;
 			min-width: 0;
 		}
+
+		/* the LEDA 136976 write-up carries a single wide panel; at full column
+		   width it dwarfs the text, so hold it to 60% and centre it */
+		.research-page #hi-dwarfs .research-figures {
+			justify-content: center;
+		}
+
+			.research-page #hi-dwarfs .research-figure {
+				flex: 0 1 60%;
+			}
 
 			#first .research-figure img,
 			.research-page .research-figure img {
@@ -498,6 +462,22 @@
 			white-space: nowrap;
 		}
 
+/* --- Other experiences table ------------------------------------------------
+   Same treatment as the TA table above: sized down, with Period and Role held
+   to their content so the Activity column takes the slack. */
+
+	.cv-page #main #other-exp table {
+		font-size: 0.85em;
+	}
+
+		.cv-page #main #other-exp table th:nth-child(1),
+		.cv-page #main #other-exp table td:nth-child(1),
+		.cv-page #main #other-exp table th:nth-child(3),
+		.cv-page #main #other-exp table td:nth-child(3) {
+			width: 1%;
+			white-space: nowrap;
+		}
+
 /* --- Section note -----------------------------------------------------------
    Small print below a list, e.g. explaining the [O]/[P] markers in the
    Seminars & informal talks list. */
@@ -585,3 +565,485 @@
 		}
 
 	}
+
+/* --- Home: sidebar layout ---------------------------------------------------
+   index.html runs on its own shell rather than the template's centred column:
+   a fixed identity rail on the left (photo, name, page links, contact pinned to
+   the bottom) and a scrolling content column on the right. Everything here is
+   scoped to .sidebar-layout so the other pages keep the stock Stellar chrome. */
+
+	.sidebar-layout #wrapper {
+		width: 100%;
+		max-width: none;
+		margin: 0;
+	}
+
+/* --- the rail -------------------------------------------------------------- */
+
+	.sidebar-layout #sidebar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 21.6%;
+		min-width: 14.4em;
+		max-width: 19.8em;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		padding: 2.25em 2em 2em 2em;
+		overflow-y: auto;
+		/* cool mist -- a neutral half-step off the photo's sky */
+		background-color: #E3E8EA;
+		color: #33474f;
+		border-right: 0;
+	}
+
+		.sidebar-layout .sidebar-top {
+			text-align: center;
+		}
+
+		.sidebar-layout .sidebar-bottom {
+			margin-top: auto;
+			padding-top: 2em;
+			text-align: center;
+		}
+
+		.side-photo {
+			display: block;
+			width: 10.35em;
+			height: 10.35em;
+			margin: 0 auto 1.2em auto;
+			-o-object-fit: cover;
+			object-fit: cover;
+			border-radius: 50%;
+			border: solid 4px #ffffff;
+			box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+		}
+
+		.sidebar-layout #sidebar h1,
+		.sidebar-layout #sidebar h2 {
+			color: #12313c;
+		}
+
+		.sidebar-layout .side-name {
+			margin: 0 0 0.35em 0;
+			font-size: 1.25em;
+			font-weight: 700;
+			line-height: 1.2;
+			color: #12313c;
+		}
+
+		.side-role {
+			margin: 0 0 2.5em 0;
+			font-size: 0.6em;
+			line-height: 1.5;
+			letter-spacing: 0;
+			color: #6b7c84;
+		}
+
+/* page links: flat rows, the current page marked with a soft pill */
+
+	.side-nav ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: left;
+	}
+
+		.side-nav li {
+			padding: 0;
+			margin: 0 0 0.35em 0;
+		}
+
+			.side-nav a {
+				display: block;
+				padding: 0.55em 0.9em;
+				font-size: 0.85em;
+				letter-spacing: 0.02em;
+				color: #33474f;
+				text-decoration: none;
+				border-bottom: 0;
+				border-radius: 0.25em;
+				-moz-transition: background-color 0.2s ease, color 0.2s ease;
+				-webkit-transition: background-color 0.2s ease, color 0.2s ease;
+				-ms-transition: background-color 0.2s ease, color 0.2s ease;
+				transition: background-color 0.2s ease, color 0.2s ease;
+			}
+
+				.side-nav a:hover {
+					background-color: rgba(255, 255, 255, 0.6);
+					color: #12313c;
+				}
+
+				.side-nav a.active {
+					background-color: #ffffff;
+					color: #12313c;
+					font-weight: 600;
+				}
+
+/* in-page section links, shown under the current page's entry */
+
+	.side-nav .side-sub > ul {
+		list-style: none;
+		margin: 0.15em 0 0.5em 0;
+		padding: 0;
+	}
+
+		.side-nav .side-sub li {
+			margin: 0;
+		}
+
+			.side-nav .side-sub a {
+				padding: 0.35em 0.9em 0.35em 1.9em;
+				font-size: 0.72em;
+				color: #5d7079;
+				border-radius: 0.2em;
+			}
+
+				.side-nav .side-sub a:hover {
+					background-color: rgba(255, 255, 255, 0.45);
+					color: #12313c;
+				}
+
+	.sidebar-layout .sidebar-bottom h2 {
+		/* aligned with the nav rows above rather than centred over the icons */
+		margin: 0 0 0.8em 0;
+		padding-left: 0.9em;
+		font-size: 0.6em;
+		font-weight: 700;
+		text-align: left;
+	}
+
+	.sidebar-layout .sidebar-bottom ul.icons {
+		margin: 0 0 1.2em 0;
+		font-size: 0.7em;
+	}
+
+	.side-credit {
+		margin: 1.4em 0 0 0;
+		font-size: 0.55em;
+		line-height: 1.5;
+		letter-spacing: 0;
+		color: #8d9aa1;
+	}
+
+		.side-credit a {
+			color: #8d9aa1;
+			border-bottom-color: rgba(141, 154, 161, 0.4);
+		}
+
+			.side-credit a:hover {
+				color: #33474f;
+			}
+
+	.side-address {
+		margin: 0;
+		font-size: 0.6em;
+		line-height: 1.6;
+		letter-spacing: 0;
+		color: #7b8b92;
+	}
+
+/* contact icons: dark glyphs, tinted rings to sit on the pale rail */
+
+	.sidebar-layout #sidebar .icon.alt {
+		border-color: rgba(18, 49, 60, 0.25);
+		color: #33474f;
+	}
+
+		.sidebar-layout #sidebar .icon.alt:hover {
+			background-color: rgba(255, 255, 255, 0.6);
+		}
+
+		.sidebar-layout #sidebar .icon.alt:active {
+			background-color: rgba(255, 255, 255, 0.85);
+		}
+
+/* --- the content column ---------------------------------------------------- */
+
+	.sidebar-layout #content,
+	.sidebar-layout #wrapper > #main {
+		margin-left: 21.6%;
+	}
+
+	.sidebar-layout #content,
+	.sidebar-layout #wrapper > #main {
+		padding: 3.5em 4em 2em 4em;
+	}
+
+	@media screen and (min-width: 1600px) {
+
+		.sidebar-layout #content,
+		.sidebar-layout #wrapper > #main {
+			margin-left: 19.8em;
+		}
+
+	}
+
+/* sections inside those pages carry the template's 5em block padding; bring it
+   in line with the home page and let the rules below own the spacing */
+
+	/* the detail pages carry dense reference material -- tables, entry lists,
+	   long write-ups. Scale the whole column down rather than each rule, so the
+	   proportions the template sets up are preserved. */
+
+	.sidebar-layout #wrapper > #main {
+		font-size: 0.82em;
+	}
+
+	.sidebar-layout #wrapper > #main > .main {
+		padding: 2.75em 0 2.25em 0;
+	}
+
+		.sidebar-layout #wrapper > #main > .main:first-child {
+			padding-top: 0.5em;
+		}
+
+		/* section marker: a navy bar, matching the rail */
+		.sidebar-layout #content h2,
+		.sidebar-layout #wrapper > #main h2 {
+			margin: 0 0 0.8em 0;
+			font-size: 1.65em;
+			border-left: 4px solid #12313c;
+			padding-left: 0.6em;
+		}
+
+		/* subsection marker: the same idea, one step quieter */
+		.sidebar-layout #wrapper > #main h3 {
+			margin: 2em 0 0.8em 0;
+			font-size: 1.15em;
+			color: #12313c;
+		}
+
+			.sidebar-layout #wrapper > #main h3::before {
+				content: '';
+				display: inline-block;
+				width: 0.5em;
+				height: 0.5em;
+				margin-right: 0.55em;
+				background-color: #4a6c78;
+				vertical-align: middle;
+			}
+
+			/* research write-ups head each article with an h3 that is a title,
+			   not a section label -- no marker there */
+			.sidebar-layout #wrapper > #main .research-paper h3::before {
+				display: none;
+			}
+
+			.sidebar-layout #wrapper > #main .research-paper h3 {
+				font-size: 1.1em;
+			}
+
+		.sidebar-layout #wrapper > #main .tag-o {
+			color: #33474f;
+		}
+
+		.about-text p {
+			margin: 0 0 1em 0;
+			font-size: 0.88em;
+			line-height: 1.75;
+		}
+
+			.about-text p:last-child {
+				margin-bottom: 0;
+			}
+
+		.content-image {
+			margin: 0 0 2em 0;
+		}
+
+			.content-image img {
+				display: block;
+				width: 100%;
+				height: auto;
+				border-radius: 0.25em;
+			}
+
+/* --- narrow screens: the rail becomes a banner above the content ----------- */
+
+	@media screen and (max-width: 980px) {
+
+		.sidebar-layout #sidebar {
+			position: static;
+			width: auto;
+			max-width: none;
+			min-width: 0;
+			padding: 2em 1.5em 1.5em 1.5em;
+			border-right: 0;
+			border-bottom: solid 1px #e4e4e4;
+		}
+
+			.side-photo {
+				width: 8.5em;
+				height: 8.5em;
+			}
+
+			.side-role {
+				margin-bottom: 1.5em;
+			}
+
+			.side-nav ul {
+				text-align: center;
+			}
+
+				.side-nav li {
+					display: inline-block;
+					margin: 0 0.2em;
+				}
+
+					.side-nav a {
+						padding: 0.5em 1em;
+					}
+
+			.sidebar-layout .sidebar-bottom {
+				margin-top: 0;
+				padding-top: 1.5em;
+			}
+
+				/* the heading is flush left against the nav rows on the rail;
+				   in banner mode it sits over centred icons instead */
+				.sidebar-layout .sidebar-bottom h2 {
+					padding-left: 0;
+					text-align: center;
+				}
+
+		.sidebar-layout #content,
+		.sidebar-layout #wrapper > #main {
+			margin-left: 0;
+		}
+
+		.sidebar-layout #content,
+		.sidebar-layout #wrapper > #main {
+			padding: 2.5em 1.5em 1.5em 1.5em;
+		}
+
+	}
+
+/* --- Buttons in this shell ---------------------------------------------------
+   Stellar's primary button is a pale blue left over from the purple theme; in
+   the navy scheme it reads as disabled. Repaint it. */
+
+	.sidebar-layout #main .button.primary,
+	.sidebar-layout #content .button.primary {
+		background-color: #12313c;
+		color: #ffffff;
+		box-shadow: none;
+	}
+
+		.sidebar-layout #main .button.primary:hover,
+		.sidebar-layout #content .button.primary:hover {
+			background-color: #1d4757;
+		}
+
+/* --- Collapsible CV sections -------------------------------------------------
+   Each section on cv.html folds away behind its heading; Education and
+   Publications ship open, the rest closed. The state lives in .is-open on the
+   section, set in the markup so nothing flashes open before the script runs. */
+
+	.cv-page .collapsible > h2 {
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+		.cv-page .collapsible > h2:focus-visible {
+			outline: 2px solid #4a6c78;
+			outline-offset: 3px;
+		}
+
+		/* chevron, rotated when the section is open */
+		.cv-page .collapsible > h2::after {
+			content: '\f078';
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 900;
+			font-size: 0.45em;
+			margin-left: 0.9em;
+			color: #8d9aa1;
+			vertical-align: middle;
+			display: inline-block;
+			-moz-transition: -moz-transform 0.2s ease, color 0.2s ease;
+			-webkit-transition: -webkit-transform 0.2s ease, color 0.2s ease;
+			-ms-transition: -ms-transform 0.2s ease, color 0.2s ease;
+			transition: transform 0.2s ease, color 0.2s ease;
+		}
+
+		.cv-page .collapsible > h2:hover::after {
+			color: #12313c;
+		}
+
+		.cv-page .collapsible.is-open > h2::after {
+			-moz-transform: rotate(180deg);
+			-webkit-transform: rotate(180deg);
+			-ms-transform: rotate(180deg);
+			transform: rotate(180deg);
+		}
+
+	.cv-page .collapsible > .section-body {
+		display: none;
+	}
+
+	.cv-page .collapsible.is-open > .section-body {
+		display: block;
+	}
+
+	/* a closed section is just a heading: drop the block padding to a row */
+	.sidebar-layout #wrapper > #main > .collapsible:not(.is-open) {
+		padding-top: 1.5em;
+		padding-bottom: 1.25em;
+	}
+
+		.cv-page .collapsible:not(.is-open) > h2 {
+			margin-bottom: 0;
+		}
+
+/* --- Expand all / Close all --------------------------------------------------
+   Sits under the PDF button, aligned with the right edge of the sections it
+   drives. Plain text buttons: this is a utility, not a call to action. */
+
+	.cv-page .section-controls {
+		margin: 1.25em 0 1.25em 0;
+		text-align: right;
+		font-size: 0.72em;
+		color: #9aa5ab;
+	}
+
+		.cv-page .section-controls .sep {
+			margin: 0 0.5em;
+		}
+
+		/* #main's button rules carry an id, so match their weight to undo the
+		   pill: border, inset shadow and all */
+		.cv-page #main .link-button {
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			padding: 0;
+			min-width: 0;
+			height: auto;
+			line-height: inherit;
+			background: none;
+			border: 0;
+			box-shadow: none;
+			font-size: inherit;
+			font-weight: 400;
+			letter-spacing: 0;
+			text-transform: none;
+			color: #5d7079;
+			cursor: pointer;
+		}
+
+			.cv-page #main .link-button:hover {
+				background: none;
+				box-shadow: none;
+				color: #12313c;
+				text-decoration: underline;
+			}

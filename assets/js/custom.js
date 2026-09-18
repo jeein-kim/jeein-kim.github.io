@@ -49,4 +49,67 @@
 				$figureTooltip.removeClass('visible');
 			});
 
+	// Collapsible CV sections: the heading toggles its section. Sections carry
+	// .is-open in the markup, so the initial state is right before this runs.
+		var $collapsibles = $('.cv-page .collapsible');
+
+		if ($collapsibles.length) {
+
+			var toggleSection = function($section, open) {
+
+				if (typeof open == 'undefined')
+					open = !$section.hasClass('is-open');
+
+				$section.toggleClass('is-open', open);
+				$section.children('h2').attr('aria-expanded', open ? 'true' : 'false');
+
+			};
+
+			$collapsibles.children('h2')
+				.on('click', function() {
+					toggleSection($(this).parent());
+				})
+				.on('keydown', function(e) {
+
+					// Enter or Space, like a button.
+						if (e.which == 13 || e.which == 32) {
+							e.preventDefault();
+							toggleSection($(this).parent());
+						}
+
+				});
+
+			// Expand all / Close all.
+				$('[data-cv-toggle]').on('click', function() {
+
+					var open = ($(this).attr('data-cv-toggle') == 'expand');
+
+					$collapsibles.each(function() {
+						toggleSection($(this), open);
+					});
+
+				});
+
+			// A link into a collapsed section opens it first, so the scroll
+			// lands somewhere that exists.
+				var openTarget = function(hash) {
+
+					if (!hash || hash.charAt(0) != '#')
+						return;
+
+					var $target = $(hash);
+
+					if ($target.length && $target.hasClass('collapsible'))
+						toggleSection($target, true);
+
+				};
+
+			$('a[href^="#"]').on('click', function() {
+				openTarget($(this).attr('href'));
+			});
+
+			openTarget(window.location.hash);
+
+		}
+
 })(jQuery);

@@ -9,6 +9,9 @@
 		<title>CV &mdash; Jeein Kim</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;family=Noto+Sans+KR:wght@300;400;700&amp;display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/custom.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -18,197 +21,245 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
 		<link rel="manifest" href="/images/favicon/site.webmanifest" />
 	</head>
-	<body class="is-preload cv-page">
+	<body class="is-preload cv-page sidebar-layout">
 
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<h1>Curriculum Vitae</h1>
-						<p>Jeein Kim</p>
-					</header>
+				<!-- Sidebar -->
+					<aside id="sidebar">
+						<div class="sidebar-top">
+							<img class="side-photo" src="images/profile.jpg" alt="Jeein Kim" />
+							<h1 class="side-name">Jeein Kim</h1>
+							<p class="side-role">PhD Student<br />
+								Dept. of Astronomy, Yonsei Univ.</p>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="#education">Education</a></li>
-							<li><a href="#publications">Publications</a></li>
-							<li><a href="#presentations">Presentations</a></li>
-							<li><a href="#proposals">Observations &amp; Proposals</a></li>
-							<li><a href="#others">Others</a></li>
-						</ul>
-					</nav>
+							<nav class="side-nav">
+								<ul>
+									<li><a href="index.html">Home</a></li>
+									<li><a href="research.html">Research Interest</a></li>
+									<li><a href="cv.html" class="active">CV</a></li>
+									<li class="side-sub"><ul>
+										<li><a href="#education" class="scrolly">Education</a></li>
+										<li><a href="#publications" class="scrolly">Publications</a></li>
+										<li><a href="#presentations" class="scrolly">Presentations</a></li>
+										<li><a href="#proposals" class="scrolly">Observations &amp; Proposals</a></li>
+										<li><a href="#others" class="scrolly">Others</a></li>
+									</ul></li>
+								</ul>
+							</nav>
+						</div>
 
-				<!-- Main -->
+						<div class="sidebar-bottom">
+							<h2>Contact</h2>
+							<ul class="icons">
+								<li><a href="https://orcid.org/0000-0002-3170-7434" class="icon brands fa-orcid alt" target="_blank" rel="noopener noreferrer"><span class="label">ORCID</span></a></li>
+								<li><a href="https://ui.adsabs.harvard.edu/public-libraries/KmjWaYBAQIKqrcffK59Q2g" class="icon alt icon-ads" aria-label="NASA ADS" target="_blank" rel="noopener noreferrer"><span class="label">NASA ADS</span></a></li>
+								<li><a href="mailto:jikim.astro@gmail.com" class="icon solid fa-envelope alt"><span class="label">Email</span></a></li>
+							</ul>
+							<p class="side-address">03722 Yonsei University, 50 Yonsei-Ro,
+								Seodaemun-Gu, Seoul, South Korea<br />
+								+82-(0)2-2123-8513</p>
+							<p class="side-credit">&copy; Jeein Kim. Credit:
+								<a href="https://html5up.net" target="_blank" rel="noopener noreferrer">HTML5 UP</a>.</p>
+						</div>
+					</aside>
+
+				<!-- Content -->
 					<div id="main">
 
+						<!-- CV PDF -->
+						<section class="main special cv-pdf">
+							<ul class="actions special">
+								<li><a href="cv/cv_short.pdf" class="button primary small" target="_blank" rel="noopener noreferrer">View CV (PDF)</a></li>
+							</ul>
+							<div class="section-controls">
+								<button type="button" class="link-button" data-cv-toggle="expand">Expand all</button>
+								<span class="sep" aria-hidden="true">/</span>
+								<button type="button" class="link-button" data-cv-toggle="collapse">Close all</button>
+							</div>
+						</section>
 
 						<!-- Education -->
-						<section id="education" class="main">
-							<h2>Education</h2>
-							<dl class="alt cv-education">
-								<dt>2021 &ndash; present</dt>
-								<dd><strong>Ph.D. in Astronomy</strong>, Yonsei University, Seoul, Korea
-									<!-- Entered the graduate course 03 Mar 2021; changed to the integrated course 07 Jul 2022. --></dd>
-								<dt>2016 &ndash; 2021</dt>
-								<dd><strong>B.S. in Astronomy</strong>, Yonsei University, Seoul, Korea<br />
-									<span class="course-level">(Minor in Electrical &amp; Electronic Engineering)</span></dd>
-							</dl>
+						<section id="education" class="main collapsible is-open">
+							<h2 role="button" tabindex="0" aria-expanded="true">Education</h2>
+							<div class="section-body">
+								<dl class="alt cv-education">
+									<dt>2021 &ndash; present</dt>
+									<dd><strong>Ph.D. in Astronomy</strong>, Yonsei University, Seoul, Korea
+										<!-- Entered the graduate course 03 Mar 2021; changed to the integrated course 07 Jul 2022. --></dd>
+									<dt>2016 &ndash; 2021</dt>
+									<dd><strong>B.S. in Astronomy</strong>, Yonsei University, Seoul, Korea<br />
+										<span class="course-level">(Minor in Electrical &amp; Electronic Engineering)</span></dd>
+								</dl>
+							</div>
 						</section>
 
 						<!-- Publications -->
-						<section id="publications" class="main">
-							<h2>Publications</h2>
-							<div class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th>Date</th>
-											<th>Title</th>
-											<th>Journal</th>
-											<th>Link</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>2026.04</td>
-											<td>BASS: LI. Cool gas supply of HI-massive local Seyfert galaxies</td>
-											<td>A&amp;A (first author)</td>
-											<td><a href="https://ui.adsabs.harvard.edu/abs/2026A%26A...708A.268K/abstract" target="_blank" rel="noopener noreferrer">ADS</a></td>
-										</tr>
-										<tr>
-											<td>2025.08</td>
-											<td>BASS: XLIV. Morphological preferences of local hard X-ray selected AGNs</td>
-											<td>A&amp;A (co-author)</td>
-											<td><a href="https://ui.adsabs.harvard.edu/abs/2025A%26A...700A.111P/abstract" target="_blank" rel="noopener noreferrer">ADS</a></td>
-										</tr>
-										<tr>
-											<td>submitted</td>
-											<td>Caterpillar in a Cabbage: A Milky Way-Sized HI Reservoir Around an Optically Faint Dwarf Galaxy</td>
-											<td>ApJL (first author)</td>
-											<td>&mdash;</td>
-										</tr>
-									</tbody>
-								</table>
+						<section id="publications" class="main collapsible is-open">
+							<h2 role="button" tabindex="0" aria-expanded="true">Publications</h2>
+							<div class="section-body">
+								<div class="table-wrapper">
+									<table class="alt">
+										<thead>
+											<tr>
+												<th>Date</th>
+												<th>Title</th>
+												<th>Journal</th>
+												<th>Link</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>2026.04</td>
+												<td>BASS: LI. Cool gas supply of HI-massive local Seyfert galaxies</td>
+												<td>A&amp;A (first author)</td>
+												<td><a href="https://ui.adsabs.harvard.edu/abs/2026A%26A...708A.268K/abstract" target="_blank" rel="noopener noreferrer">ADS</a></td>
+											</tr>
+											<tr>
+												<td>2025.08</td>
+												<td>BASS: XLIV. Morphological preferences of local hard X-ray selected AGNs</td>
+												<td>A&amp;A (co-author)</td>
+												<td><a href="https://ui.adsabs.harvard.edu/abs/2025A%26A...700A.111P/abstract" target="_blank" rel="noopener noreferrer">ADS</a></td>
+											</tr>
+											<tr>
+												<td>submitted</td>
+												<td>Caterpillar in a Cabbage: A Milky Way-Sized HI Reservoir Around an Optically Faint Dwarf Galaxy</td>
+												<td>ApJL (first author)</td>
+												<td>&mdash;</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
 						</section>
 
 						<!-- Presentations -->
-						<section id="presentations" class="main">
-							<h2>Presentations</h2>
-							<h3>Oral presentations (9)</h3>
-							<ul class="alt cv-entries">
-								<li><span class="entry-name"><a href="https://aas.org/meetings/aas249" target="_blank" rel="noopener noreferrer">AAS 249 Winter Meeting</a></span><span class="entry-meta">Salt Lake City, UT, USA &mdash; Jan 10-14, 2027</span></li>
-								<li><span class="entry-name"><a href="https://kgmt.kasi.re.kr/kgmtscience/content/2026-k-gmt-science-program-users-meeting-home" target="_blank" rel="noopener noreferrer">K-GMT Science Program Users Meeting 2026</a></span><span class="entry-meta">Daejeon, Korea &mdash; Aug 19-21, 2026</span></li>
-								<li><span class="entry-name"><a href="https://sites.google.com/inaf.it/phiscc2025" target="_blank" rel="noopener noreferrer">PHISCC 2025</a></span><span class="entry-meta">Cagliari, Italy &mdash; Sep 22-26, 2025</span></li>
-								<li><span class="entry-name">KAS 2025 Spring</span><span class="entry-meta">Gyeongju, Korea &mdash; Apr 9-11, 2025</span></li>
-								<li><span class="entry-name"><a href="https://web.cvent.com/event/a047988c-1aad-4763-ba44-a124d2fe45e0/summary" target="_blank" rel="noopener noreferrer">40th Annual New Mexico Symposium</a></span><span class="entry-meta">Socorro, NM, USA &mdash; Nov 22, 2024</span></li>
-								<li><span class="entry-name">Los Alamos Astro Seminar<a href="http://la-astro.github.io/sheetsee-calendar/" target="_blank" rel="noopener noreferrer" class="hidden-marker">&bull;</a></span><span class="entry-meta">LANL, NM, USA &mdash; Jul 15-19, 2024</span></li>
-								<li><span class="entry-name">BASS2024: New Horizons for Understanding Nearby AGN</span><span class="entry-meta">Maryland, USA &mdash; Apr 29 - May 2, 2024</span></li>
-								<li><span class="entry-name"><a href="https://ska.kasi.re.kr/meetings/easka-2023" target="_blank" rel="noopener noreferrer">EA-SKA Workshop 2023</a></span><span class="entry-meta">Jeju, Korea &mdash; Nov 2, 2023</span></li>
-								<li><span class="entry-name"><a href="https://www.astro.rug.nl/~phiscc2023/" target="_blank" rel="noopener noreferrer">PHISCC 2023</a></span><span class="entry-meta">Cape Town, South Africa &mdash; Mar 29, 2023</span></li>
-							</ul>
-							<h3>Poster presentations (5)</h3>
-							<ul class="alt cv-entries">
-								<li><span class="entry-name"><a href="https://indico.narit.or.th/event/228/" target="_blank" rel="noopener noreferrer">Asia-Pacific SKA</a></span><span class="entry-meta">Chiang Mai, Thailand &mdash; Feb 2026</span></li>
-								<li><span class="entry-name">KAS 2023 Fall</span><span class="entry-meta">Jeju, Korea &mdash; Oct 18-20, 2023</span></li>
-								<li><span class="entry-name"><a href="https://www.iauga2022.org" target="_blank" rel="noopener noreferrer">IAUGA 2022</a></span><span class="entry-meta">Busan, Korea &mdash; Aug 1-12, 2022</span></li>
-								<li><span class="entry-name"><a href="https://events.asiaa.sinica.edu.tw/workshop/20220207/index.php" target="_blank" rel="noopener noreferrer">ASIAA Galaxy Evolution Workshop 2021</a></span><span class="entry-meta">Online &mdash; Feb 7-10, 2022</span></li>
-								<li><span class="entry-name">KAS 2021 Fall</span><span class="entry-meta">Jeju, Korea &mdash; Oct 13-15, 2021</span></li>
-							</ul>
-							<h3>Seminars &amp; informal talks (10)</h3>
-							<ul class="alt cv-entries">
-								<li><span class="entry-name"><strong class="tag-o">[O]</strong> ICRAR-UWA Seminar</span><span class="entry-meta">Perth, Australia &mdash; Aug 27, 2024</span></li>
-								<li><span class="entry-name"><strong class="tag-o">[O]</strong> <a href="https://ska.kasi.re.kr/meetings/2024feb-ska-korea" target="_blank" rel="noopener noreferrer">2024 Winter SKA-Korea Workshop</a></span><span class="entry-meta">Busan, Korea &mdash; Feb 20, 2024</span></li>
-								<li><span class="entry-name"><strong class="tag-o">[O]</strong> ICRAR Student Day, University of Western Australia</span><span class="entry-meta">Perth, Australia &mdash; Dec 8, 2023</span></li>
-								<li><span class="entry-name"><strong class="tag-o">[O]</strong> University of Queensland Astro Group Seminar</span><span class="entry-meta">Brisbane, Australia &mdash; Dec 4, 2023</span></li>
-								<li><span class="entry-name"><strong class="tag-o">[O]</strong> <a href="https://science.nrao.edu/facilities/vla/ctw/wedlunch/2023" target="_blank" rel="noopener noreferrer">NRAO Wednesday Talk</a></span><span class="entry-meta">Socorro, NM, USA &mdash; Oct 4, 2023</span></li>
-								<li><span class="entry-name"><strong class="tag-o">[O]</strong> SPHEREx AGN Workshop</span><span class="entry-meta">Cheonan, Korea &mdash; Jan 12-13, 2023</span></li>
-								<li><span class="entry-name"><strong class="tag-o">[O]</strong> CGER1 Kick-off Meeting</span><span class="entry-meta">Gangneung, Korea &mdash; Jul 13-15, 2022</span></li>
-								<li><span class="entry-name"><strong class="tag-o">[O]</strong> <a href="https://cascade.yonsei.ac.kr/workshop/env22/" target="_blank" rel="noopener noreferrer">Env22 Workshop</a></span><span class="entry-meta">Online &mdash; Feb 22-23, 2022</span></li>
-								<li><span class="entry-name"><strong class="tag-p">[P]</strong> The 6th Yonsei Astro Poster Jamboree &mdash; won first place</span><span class="entry-meta">Yonsei Univ., Korea &mdash; Nov 4, 2022</span></li>
-								<li><span class="entry-name"><strong class="tag-p">[P]</strong> The 5th Yonsei Astro Poster Jamboree</span><span class="entry-meta">Online &mdash; Dec 23, 2021</span></li>
-							</ul>
-							<p class="section-note">*[O] indicates oral presentations and [P] indicates posters.</p>
+						<section id="presentations" class="main collapsible">
+							<h2 role="button" tabindex="0" aria-expanded="false">Presentations</h2>
+							<div class="section-body">
+								<h3>Oral presentations (9)</h3>
+								<ul class="alt cv-entries">
+									<li><span class="entry-name"><a href="https://aas.org/meetings/aas249" target="_blank" rel="noopener noreferrer">AAS 249 Winter Meeting</a></span><span class="entry-meta">Salt Lake City, UT, USA &mdash; Jan 10-14, 2027</span></li>
+									<li><span class="entry-name"><a href="https://kgmt.kasi.re.kr/kgmtscience/content/2026-k-gmt-science-program-users-meeting-home" target="_blank" rel="noopener noreferrer">K-GMT Science Program Users Meeting 2026</a></span><span class="entry-meta">Daejeon, Korea &mdash; Aug 19-21, 2026</span></li>
+									<li><span class="entry-name"><a href="https://sites.google.com/inaf.it/phiscc2025" target="_blank" rel="noopener noreferrer">PHISCC 2025</a></span><span class="entry-meta">Cagliari, Italy &mdash; Sep 22-26, 2025</span></li>
+									<li><span class="entry-name">KAS 2025 Spring</span><span class="entry-meta">Gyeongju, Korea &mdash; Apr 9-11, 2025</span></li>
+									<li><span class="entry-name"><a href="https://web.cvent.com/event/a047988c-1aad-4763-ba44-a124d2fe45e0/summary" target="_blank" rel="noopener noreferrer">40th Annual New Mexico Symposium</a></span><span class="entry-meta">Socorro, NM, USA &mdash; Nov 22, 2024</span></li>
+									<li><span class="entry-name">Los Alamos Astro Seminar<a href="http://la-astro.github.io/sheetsee-calendar/" target="_blank" rel="noopener noreferrer" class="hidden-marker">&bull;</a></span><span class="entry-meta">LANL, NM, USA &mdash; Jul 15-19, 2024</span></li>
+									<li><span class="entry-name">BASS2024: New Horizons for Understanding Nearby AGN</span><span class="entry-meta">Maryland, USA &mdash; Apr 29 - May 2, 2024</span></li>
+									<li><span class="entry-name"><a href="https://ska.kasi.re.kr/meetings/easka-2023" target="_blank" rel="noopener noreferrer">EA-SKA Workshop 2023</a></span><span class="entry-meta">Jeju, Korea &mdash; Nov 2, 2023</span></li>
+									<li><span class="entry-name"><a href="https://www.astro.rug.nl/~phiscc2023/" target="_blank" rel="noopener noreferrer">PHISCC 2023</a></span><span class="entry-meta">Cape Town, South Africa &mdash; Mar 29, 2023</span></li>
+								</ul>
+								<h3>Poster presentations (5)</h3>
+								<ul class="alt cv-entries">
+									<li><span class="entry-name"><a href="https://indico.narit.or.th/event/228/" target="_blank" rel="noopener noreferrer">Asia-Pacific SKA</a></span><span class="entry-meta">Chiang Mai, Thailand &mdash; Feb 2026</span></li>
+									<li><span class="entry-name">KAS 2023 Fall</span><span class="entry-meta">Jeju, Korea &mdash; Oct 18-20, 2023</span></li>
+									<li><span class="entry-name"><a href="https://www.iauga2022.org" target="_blank" rel="noopener noreferrer">IAUGA 2022</a></span><span class="entry-meta">Busan, Korea &mdash; Aug 1-12, 2022</span></li>
+									<li><span class="entry-name"><a href="https://events.asiaa.sinica.edu.tw/workshop/20220207/index.php" target="_blank" rel="noopener noreferrer">ASIAA Galaxy Evolution Workshop 2021</a></span><span class="entry-meta">Online &mdash; Feb 7-10, 2022</span></li>
+									<li><span class="entry-name">KAS 2021 Fall</span><span class="entry-meta">Jeju, Korea &mdash; Oct 13-15, 2021</span></li>
+								</ul>
+								<h3>Seminars &amp; informal talks (10)</h3>
+								<ul class="alt cv-entries">
+									<li><span class="entry-name"><strong class="tag-o">[O]</strong> ICRAR-UWA Seminar</span><span class="entry-meta">Perth, Australia &mdash; Aug 27, 2024</span></li>
+									<li><span class="entry-name"><strong class="tag-o">[O]</strong> <a href="https://ska.kasi.re.kr/meetings/2024feb-ska-korea" target="_blank" rel="noopener noreferrer">2024 Winter SKA-Korea Workshop</a></span><span class="entry-meta">Busan, Korea &mdash; Feb 20, 2024</span></li>
+									<li><span class="entry-name"><strong class="tag-o">[O]</strong> ICRAR Student Day, University of Western Australia</span><span class="entry-meta">Perth, Australia &mdash; Dec 8, 2023</span></li>
+									<li><span class="entry-name"><strong class="tag-o">[O]</strong> University of Queensland Astro Group Seminar</span><span class="entry-meta">Brisbane, Australia &mdash; Dec 4, 2023</span></li>
+									<li><span class="entry-name"><strong class="tag-o">[O]</strong> <a href="https://science.nrao.edu/facilities/vla/ctw/wedlunch/2023" target="_blank" rel="noopener noreferrer">NRAO Wednesday Talk</a></span><span class="entry-meta">Socorro, NM, USA &mdash; Oct 4, 2023</span></li>
+									<li><span class="entry-name"><strong class="tag-o">[O]</strong> SPHEREx AGN Workshop</span><span class="entry-meta">Cheonan, Korea &mdash; Jan 12-13, 2023</span></li>
+									<li><span class="entry-name"><strong class="tag-o">[O]</strong> CGER1 Kick-off Meeting</span><span class="entry-meta">Gangneung, Korea &mdash; Jul 13-15, 2022</span></li>
+									<li><span class="entry-name"><strong class="tag-o">[O]</strong> <a href="https://cascade.yonsei.ac.kr/workshop/env22/" target="_blank" rel="noopener noreferrer">Env22 Workshop</a></span><span class="entry-meta">Online &mdash; Feb 22-23, 2022</span></li>
+									<li><span class="entry-name"><strong class="tag-p">[P]</strong> The 6th Yonsei Astro Poster Jamboree &mdash; won first place</span><span class="entry-meta">Yonsei Univ., Korea &mdash; Nov 4, 2022</span></li>
+									<li><span class="entry-name"><strong class="tag-p">[P]</strong> The 5th Yonsei Astro Poster Jamboree</span><span class="entry-meta">Online &mdash; Dec 23, 2021</span></li>
+								</ul>
+								<p class="section-note">*[O] indicates oral presentations and [P] indicates posters.</p>
+							</div>
 						</section>
 
 						<!-- Observations &amp; Proposals -->
-						<section id="proposals" class="main">
-							<h2>Observations &amp; Proposals</h2>
-							<h3>PI</h3>
-							<div class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th>Telescope / instrument</th>
-											<th>Semester</th>
-											<th>Proposal</th>
-											<th>Status</th>
-											<th>Obs. hours</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>JCMT/HARP</td>
-											<td>2023A</td>
-											<td>A CO (3-2) study of HI-rich local X-ray AGN hosts</td>
-											<td>Accepted</td>
-											<td>6.58 hrs</td>
-										</tr>
-										<tr>
-											<td>VLA/L-band</td>
-											<td>2023B</td>
-											<td>Probing HI Gas Surrounding BASS AGN Host Galaxies</td>
-											<td>Accepted</td>
-											<td><a href="https://library.nrao.edu/proposals/?utf8=✓%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20&search_field=all_fields&q=23B-079" target="_blank" rel="noopener noreferrer">23B-079</a>; 64 hrs</td>
-										</tr>
-										<tr>
-											<td>KVN Single dish</td>
-											<td>2023B</td>
-											<td><sup>12</sup>CO (1-0) observations of 6 hard X-ray-selected local AGN host galaxies</td>
-											<td>Accepted</td>
-											<td>12 hrs</td>
-										</tr>
-										<tr>
-											<td>VLA/L-band</td>
-											<td>2025A</td>
-											<td>Probing HI Gas Surrounding an X-ray AGN Host, NGC 3393</td>
-											<td>Accepted</td>
-											<td><a href="https://library.nrao.edu/proposals/?utf8=✓%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20&search_field=all_fields&q=25A-343" target="_blank" rel="noopener noreferrer">25A-343</a>; 4.7 hrs</td>
-										</tr>
-										<tr>
-											<td>Gemini-N/GMOS</td>
-											<td>2025B</td>
-											<td>Probing the Nature of an HI Gas-Dominated Dwarf Galaxy Candidate via Long-Slit Spectroscopy</td>
-											<td>Accepted</td>
-											<td>1.45 hrs</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<h3>Co-I</h3>
-							<div class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th>Telescope / instrument</th>
-											<th>Semester</th>
-											<th>Proposal</th>
-											<th>Status</th>
-											<th>Obs. hours</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Gemini-N/GMOS</td>
-											<td>2026B</td>
-											<td>A Long-Slit Spectroscopy Census of Dwarf Companions in Two Massive HI Systems</td>
-											<td>Accepted</td>
-											<td>4.47 hrs</td>
-										</tr>
-									</tbody>
-								</table>
+						<section id="proposals" class="main collapsible">
+							<h2 role="button" tabindex="0" aria-expanded="false">Observations &amp; Proposals</h2>
+							<div class="section-body">
+								<h3>PI</h3>
+								<div class="table-wrapper">
+									<table class="alt">
+										<thead>
+											<tr>
+												<th>Telescope / instrument</th>
+												<th>Semester</th>
+												<th>Proposal</th>
+												<th>Status</th>
+												<th>Obs. hours</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>JCMT/HARP</td>
+												<td>2023A</td>
+												<td>A CO (3-2) study of HI-rich local X-ray AGN hosts</td>
+												<td>Accepted</td>
+												<td>6.58 hrs</td>
+											</tr>
+											<tr>
+												<td>VLA/L-band</td>
+												<td>2023B</td>
+												<td>Probing HI Gas Surrounding BASS AGN Host Galaxies</td>
+												<td>Accepted</td>
+												<td><a href="https://library.nrao.edu/proposals/?utf8=✓%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20&search_field=all_fields&q=23B-079" target="_blank" rel="noopener noreferrer">23B-079</a>; 64 hrs</td>
+											</tr>
+											<tr>
+												<td>KVN Single dish</td>
+												<td>2023B</td>
+												<td><sup>12</sup>CO (1-0) observations of 6 hard X-ray-selected local AGN host galaxies</td>
+												<td>Accepted</td>
+												<td>12 hrs</td>
+											</tr>
+											<tr>
+												<td>VLA/L-band</td>
+												<td>2025A</td>
+												<td>Probing HI Gas Surrounding an X-ray AGN Host, NGC 3393</td>
+												<td>Accepted</td>
+												<td><a href="https://library.nrao.edu/proposals/?utf8=✓%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20&search_field=all_fields&q=25A-343" target="_blank" rel="noopener noreferrer">25A-343</a>; 4.7 hrs</td>
+											</tr>
+											<tr>
+												<td>Gemini-N/GMOS</td>
+												<td>2025B</td>
+												<td>Probing the Nature of an HI Gas-Dominated Dwarf Galaxy Candidate via Long-Slit Spectroscopy</td>
+												<td>Accepted</td>
+												<td>1.45 hrs</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<h3>Co-I</h3>
+								<div class="table-wrapper">
+									<table class="alt">
+										<thead>
+											<tr>
+												<th>Telescope / instrument</th>
+												<th>Semester</th>
+												<th>Proposal</th>
+												<th>Status</th>
+												<th>Obs. hours</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Gemini-N/GMOS</td>
+												<td>2026B</td>
+												<td>A Long-Slit Spectroscopy Census of Dwarf Companions in Two Massive HI Systems</td>
+												<td>Accepted</td>
+												<td>4.47 hrs</td>
+											</tr>
+											<tr>
+												<td>VLA/K-band</td>
+												<td>2026B</td>
+												<td>Expanding the Puzzle: A VLA Radio Atlas of the BAT AGN Legacy Survey</td>
+												<td>Accepted</td>
+												<td><a href="https://library.nrao.edu/proposals/?utf8=✓&search_field=all_fields&q=26B-213" target="_blank" rel="noopener noreferrer">26B-213</a>; 98.2 hrs</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
 						</section>
 
@@ -339,82 +390,44 @@
 						-->
 
 						<!-- Others -->
-						<section id="others" class="main">
-							<h2>Others</h2>
-							<ul class="alt cv-entries">
-								<li><span class="entry-name"><a href="https://ska.kasi.re.kr" target="_blank" rel="noopener noreferrer">2026 SKA-Korea Winter Workshop</a></span><span class="entry-meta"><strong>LOC</strong> &mdash; Yonsei Univ., Korea &mdash; Dec 16-18, 2026</span></li>
-								<li><span class="entry-name"><a href="https://ngvla.nao.ac.jp/ngVLA_Sendai/" target="_blank" rel="noopener noreferrer">ngVLA International Science Conference 2026</a></span><span class="entry-meta">Participant &mdash; Sendai, Japan &mdash; Nov 10-13, 2026</span></li>
-								<li><span class="entry-name"><a href="https://astro.yonsei.ac.kr/galaxy/galaxy01/news.do?mode=view&articleNo=458034&article.offset=0&articleLimit=10" target="_blank" rel="noopener noreferrer">The 10th Astro Poster Jamboree</a></span><span class="entry-meta"><strong>Chair of the Organizing Committee</strong> &mdash; Yonsei Univ., Korea &mdash; Nov 28, 2025</span></li>
-								<li><span class="entry-name"><a href="https://public.nrao.edu/news/the-vla-fall-open-house/" target="_blank" rel="noopener noreferrer">The Fall Open House at the VLA</a></span><span class="entry-meta"><strong>Science Staff</strong> &mdash; VLA, NM, USA &mdash; Oct 12, 2024</span></li>
-								<li><span class="entry-name"><a href="https://sites.google.com/view/spherex-7ds-workshop/home" target="_blank" rel="noopener noreferrer">2024 SPHEREx-7DT Joint Workshop</a></span><span class="entry-meta">Participant &mdash; Jecheon, Korea &mdash; Jan 24-26, 2024</span></li>
-								<li><span class="entry-name"><a href="https://alma.kasi.re.kr/index.php#SS23" target="_blank" rel="noopener noreferrer">The 7th ALMA Summer School</a></span><span class="entry-meta">Participant &mdash; Seobaeksan Observatory, Korea &mdash; Jul 31 - Aug 4, 2023</span></li>
-								<li><span class="entry-name"><a href="https://web.cvent.com/event/90ae72df-7675-41b5-b056-48af11e1aa7f/summary" target="_blank" rel="noopener noreferrer">The 20th Synthesis Imaging School</a></span><span class="entry-meta">Participant &mdash; Socorro, NM, USA &mdash; May 16-22, 2023</span></li>
-								<li><span class="entry-name"><a href="https://astro.yonsei.ac.kr/galaxy/galaxy01/notice.do?mode=view&articleNo=152601&article.offset=120&articleLimit=10" target="_blank" rel="noopener noreferrer">The 6th Astro Poster Jamboree</a></span><span class="entry-meta"><strong>Chair of the Organizing Committee</strong> &mdash; Yonsei Univ., Korea &mdash; Nov 4, 2022</span></li>
-								<li><span class="entry-name"><a href="https://science.nrao.edu/science/meetings/2022/vla-data-reduction" target="_blank" rel="noopener noreferrer">9th VLA Data Reduction Workshop</a></span><span class="entry-meta">Participant &mdash; Socorro, NM, USA &mdash; Oct 11-20, 2022</span></li>
-								<li><span class="entry-name"><a href="https://www.iauga2022.org" target="_blank" rel="noopener noreferrer">IAUGA 2022</a></span><span class="entry-meta">Volunteer &mdash; Busan, Korea &mdash; Aug 1-12, 2022</span></li>
-								<li><span class="entry-name">KAS 2022 Spring</span><span class="entry-meta">Volunteer &mdash; Busan, Korea &mdash; Apr 13-15, 2022</span></li>
-								<li><span class="entry-name"><a href="https://events.kias.re.kr/h/Astro2021/" target="_blank" rel="noopener noreferrer">2021 KIAS Summer School on Extragalactic Astronomy and Cosmology</a></span><span class="entry-meta">Participant (team awarded first place) &mdash; Online &mdash; Jul 19-23, 2021</span></li>
-							</ul>
-
-							<h3>Teaching Assistant Experience</h3>
-							<div id="ta" class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th>Term</th>
-											<th>Course</th>
-											<th>Role</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Spring 2023</td>
-											<td>Radio Astronomy <span class="course-level">(4th-year undergraduate)</span></td>
-											<td>Teaching Assistant</td>
-										</tr>
-										<tr>
-											<td>Fall 2022</td>
-											<td>Astrophysics (2) <span class="course-level">(4th-year undergraduate)</span></td>
-											<td>Teaching Assistant</td>
-										</tr>
-										<tr>
-											<td>Spring 2022</td>
-											<td>Radio Astronomy <span class="course-level">(4th-year undergraduate)</span></td>
-											<td>Teaching Assistant</td>
-										</tr>
-										<tr>
-											<td>Fall 2021</td>
-											<td>Understanding of Space <span class="course-level">(general education course)</span></td>
-											<td>Teaching Assistant</td>
-										</tr>
-										<tr>
-											<td>Spring 2021</td>
-											<td>Introduction to Astrophysics (1) <span class="course-level">(2nd-year undergraduate)</span></td>
-											<td>Teaching Assistant</td>
-										</tr>
-									</tbody>
-								</table>
+						<section id="others" class="main collapsible">
+							<h2 role="button" tabindex="0" aria-expanded="false">Others</h2>
+							<div class="section-body">
+								<ul class="alt cv-entries">
+									<li><span class="entry-name"><a href="https://ska.kasi.re.kr" target="_blank" rel="noopener noreferrer">2026 SKA-Korea Winter Workshop</a></span><span class="entry-meta"><strong>LOC</strong> &mdash; Yonsei Univ., Korea &mdash; Dec 16-18, 2026</span></li>
+									<li><span class="entry-name"><a href="https://ngvla.nao.ac.jp/ngVLA_Sendai/" target="_blank" rel="noopener noreferrer">ngVLA International Science Conference 2026</a></span><span class="entry-meta">Participant &mdash; Sendai, Japan &mdash; Nov 10-13, 2026</span></li>
+									<li><span class="entry-name"><a href="https://astro.yonsei.ac.kr/galaxy/galaxy01/news.do?mode=view&articleNo=458034&article.offset=0&articleLimit=10" target="_blank" rel="noopener noreferrer">The 10th Astro Poster Jamboree</a></span><span class="entry-meta"><strong>Chair of the Organizing Committee</strong> &mdash; Yonsei Univ., Korea &mdash; Nov 28, 2025</span></li>
+									<li><span class="entry-name"><a href="https://public.nrao.edu/news/the-vla-fall-open-house/" target="_blank" rel="noopener noreferrer">The Fall Open House at the VLA</a></span><span class="entry-meta"><strong>Science Staff</strong> &mdash; VLA, NM, USA &mdash; Oct 12, 2024</span></li>
+									<li><span class="entry-name"><a href="https://sites.google.com/view/spherex-7ds-workshop/home" target="_blank" rel="noopener noreferrer">2024 SPHEREx-7DT Joint Workshop</a></span><span class="entry-meta">Participant &mdash; Jecheon, Korea &mdash; Jan 24-26, 2024</span></li>
+									<li><span class="entry-name"><a href="https://alma.kasi.re.kr/index.php#SS23" target="_blank" rel="noopener noreferrer">The 7th ALMA Summer School</a></span><span class="entry-meta">Participant &mdash; Seobaeksan Observatory, Korea &mdash; Jul 31 - Aug 4, 2023</span></li>
+									<li><span class="entry-name"><a href="https://web.cvent.com/event/90ae72df-7675-41b5-b056-48af11e1aa7f/summary" target="_blank" rel="noopener noreferrer">The 20th Synthesis Imaging School</a></span><span class="entry-meta">Participant &mdash; Socorro, NM, USA &mdash; May 16-22, 2023</span></li>
+									<li><span class="entry-name"><a href="https://astro.yonsei.ac.kr/galaxy/galaxy01/notice.do?mode=view&articleNo=152601&article.offset=120&articleLimit=10" target="_blank" rel="noopener noreferrer">The 6th Astro Poster Jamboree</a></span><span class="entry-meta"><strong>Chair of the Organizing Committee</strong> &mdash; Yonsei Univ., Korea &mdash; Nov 4, 2022</span></li>
+									<li><span class="entry-name"><a href="https://science.nrao.edu/science/meetings/2022/vla-data-reduction" target="_blank" rel="noopener noreferrer">9th VLA Data Reduction Workshop</a></span><span class="entry-meta">Participant &mdash; Socorro, NM, USA &mdash; Oct 11-20, 2022</span></li>
+									<li><span class="entry-name"><a href="https://www.iauga2022.org" target="_blank" rel="noopener noreferrer">IAUGA 2022</a></span><span class="entry-meta">Volunteer &mdash; Busan, Korea &mdash; Aug 1-12, 2022</span></li>
+									<li><span class="entry-name">KAS 2022 Spring</span><span class="entry-meta">Volunteer &mdash; Busan, Korea &mdash; Apr 13-15, 2022</span></li>
+									<li><span class="entry-name"><a href="https://events.kias.re.kr/h/Astro2021/" target="_blank" rel="noopener noreferrer">2021 KIAS Summer School on Extragalactic Astronomy and Cosmology</a></span><span class="entry-meta">Participant (team awarded first place) &mdash; Online &mdash; Jul 19-23, 2021</span></li>
+								</ul>
 							</div>
 						</section>
 
-						<!-- Back -->
+						<!-- Top -->
 						<section class="main special">
+							<div class="section-controls">
+								<button type="button" class="link-button" data-cv-toggle="expand">Expand all</button>
+								<span class="sep" aria-hidden="true">/</span>
+								<button type="button" class="link-button" data-cv-toggle="collapse">Close all</button>
+							</div>
 							<ul class="actions special">
-								<li><a href="index.html" class="button small">Back to home</a></li>
+								<li><a href="#wrapper" class="button small scrolly">Top</a></li>
 							</ul>
 						</section>
 
 					</div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; Jeein Kim. Credit: <a href="https://html5up.net" target="_blank" rel="noopener noreferrer">HTML5 UP</a>.</p>
-					</footer>
-
 			</div>
 
 		<!-- Back to top -->
-			<a href="#header" id="top-button" aria-label="Back to top">
+			<a href="#wrapper" id="top-button" aria-label="Back to top">
 				<i class="fas fa-chevron-up" aria-hidden="true"></i>
 				<span>Top</span>
 			</a>

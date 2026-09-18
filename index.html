@@ -9,6 +9,9 @@
 		<title>Jeein Kim</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;family=Noto+Sans+KR:wght@300;400;700&amp;display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/custom.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -18,149 +21,88 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png?v=3" />
 		<link rel="manifest" href="/images/favicon/site.webmanifest?v=3" />
 	</head>
-	<body class="is-preload">
+	<body class="is-preload home sidebar-layout">
 
-		<!-- Wrapper -->
+		<!-- Wrapper: fixed identity rail on the left, scrolling content on the right -->
 			<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<span class="header-image"><img src="images/header.jpg" alt="Radio telescope dishes of the Very Large Array" /></span>
-						<h1>Jeein Kim</h1>
-						<p>PhD Student at Yonsei University</p>
-					</header>
+				<!-- Sidebar -->
+					<aside id="sidebar">
+						<div class="sidebar-top">
+							<img class="side-photo" src="images/profile.jpg" alt="Jeein Kim" />
+							<h1 class="side-name">Jeein Kim</h1>
+							<p class="side-role">PhD Student<br />
+								Dept. of Astronomy, Yonsei Univ.</p>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="#intro" class="active">About</a></li>
-							<li><a href="#first">Research</a></li>
-							<li><a href="#second">Education</a></li>
-							<li><a href="#cv">CV</a></li>
-							<li><a href="#third">Contact</a></li>
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Introduction -->
-							<section id="intro" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2>About Me</h2>
-										</header>
-										<p><strong>Hello!</strong><br />
-											I am a PhD student at Yonsei University, working in the IM&amp;GE group
-											led by Prof. Aeree Chung, my PhD supervisor.</p>
-
-										<p>My thesis focuses on <strong>the resolved neutral hydrogen (HI) properties</strong> of
-											local, hard X-ray selected AGN host galaxies, a research project called <strong>"BASS-HI"</strong> (details below). The working
-											title of my thesis is <strong>&ldquo;Resolved Neutral Hydrogen Properties of Local
-											Hard X-ray Selected Active Galactic Nuclei Host Galaxies&rdquo;</strong>
-											(하드 엑스선으로 선별된 근거리 활동성은하핵 호스트 은하들의 분해된 중성수소 특성; TBU).</p>
-
-										<p>I mainly use radio interferometric observations (e.g., VLA, ATCA, WSRT) of
-											<strong>HI spectral line emission</strong>, as well as <strong>radio continuum imaging</strong>, and have
-											experience with optical spectroscopy (e.g., Gemini/GMOS) &mdash; tools I use to
-											address my broader interest in galaxy evolution. I am interested not only in
-											local AGN host galaxies, but also in HI-bearing, low surface brightness dwarf
-											galaxies as building blocks of larger galaxies, which are often missed by
-											optical surveys.</p>
-
-										<p>In 2024, I spent a year as a visiting scholar at the National Radio
-											Astronomy Observatory (NRAO) in Socorro, NM, USA, under a <a href="https://bk21four.nrf.re.kr/index.do" target="_blank" rel="noopener noreferrer">Brain Korea 21
-											FOUR grant</a>.</p>
-									</div>
-									<span class="image"><img src="images/profile.jpg" alt="Jeein Kim" /></span>
-								</div>
-							</section>
-
-						<!-- First Section -->
-							<section id="first" class="main special">
-								<header class="major">
-									<h2>Research Interest</h2>
-									<p>
-										My primary research interest lies in <strong>HI in X-ray AGN host galaxies</strong> —
-										<br />
-										<strong>how the presence of an AGN affects the surrounding HI gas reservoir</strong>,
-										<br />
-										and <strong>how Seyfert galaxies experience Macro-scale (kpc-Mpc) feeding processes</strong>.
-										<br />
-										I also have a growing interest in
-										<strong>HI-bearing, low surface brightness dwarf galaxies</strong>.
-										<br />
-										Across these topics, I use HI images and radio observations as my primary tools.
-									</p>
-								</header>
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="research.html" class="button small">Learn more</a></li>
-									</ul>
-								</footer>
-							</section>
-
-							<!-- Second Section -->
-							<section id="second" class="main special">
-								<header class="major">
-									<h2>Education</h2>
-								</header>
-
-								<dl class="alt">
-									<dt>Ph.D. in Astronomy</dt>
-									<dd><a href="https://astro.yonsei.ac.kr/galaxy/index.do" target="_blank" rel="noopener noreferrer">Department of Astronomy, Yonsei University</a>, 2027.08 (expected)</dd>
-
-									<dt>B.S. in Astronomy</dt>
-									<dd><a href="https://astro.yonsei.ac.kr/galaxy/index.do" target="_blank" rel="noopener noreferrer">Department of Astronomy, Yonsei University</a>, 2021.02</dd>
-								</dl>
-							</section>
-
-							<!-- CV -->
-							<section id="cv" class="main special">
-								<header class="major">
-									<h2>CV</h2>
-									<p>Publications, talks, observing proposals</p>
-								</header>
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="cv.html" class="button small">View CV</a></li>
-									</ul>
-								</footer>
-							</section>
-
-							<!-- Third Section -->
-							<section id="third" class="main special">
-								<header class="major">
-									<h2>Contact</h2>
-								</header>
-
-								<ul class="icons">
-									<!-- <li><a href="https://github.com/jeein-kim" class="icon brands fa-github alt" target="_blank" rel="noopener noreferrer"><span class="label">GitHub</span></a></li> -->
-									<li><a href="https://orcid.org/0000-0002-3170-7434" class="icon brands fa-orcid alt" target="_blank" rel="noopener noreferrer"><span class="label">ORCID</span></a></li>
-									<li><a href="https://ui.adsabs.harvard.edu/public-libraries/KmjWaYBAQIKqrcffK59Q2g" class="icon alt icon-ads" aria-label="NASA ADS" target="_blank" rel="noopener noreferrer"><span class="label">NASA ADS</span></a></li>
-									<li><a href="mailto:jikim.astro@gmail.com" class="icon solid fa-envelope alt"><span class="label">Email</span></a></li>
+							<nav class="side-nav">
+								<ul>
+									<li><a href="index.html" class="active">Home</a></li>
+									<li><a href="research.html">Research Interest</a></li>
+									<li><a href="cv.html">CV</a></li>
 								</ul>
+							</nav>
+						</div>
 
-								<dl class="alt">
-									<dt>Address</dt>
-									<dd>03722 Yonsei University, 50 Yonsei-Ro, Seodaemun-Gu, Seoul, South Korea</dd>
-									<dt>Tel.</dt>
-									<dd>+82-(0)2-2123-8513</dd>
-								</dl>
-							</section>
+						<div class="sidebar-bottom">
+							<h2>Contact</h2>
+							<ul class="icons">
+								<li><a href="https://orcid.org/0000-0002-3170-7434" class="icon brands fa-orcid alt" target="_blank" rel="noopener noreferrer"><span class="label">ORCID</span></a></li>
+								<li><a href="https://ui.adsabs.harvard.edu/public-libraries/KmjWaYBAQIKqrcffK59Q2g" class="icon alt icon-ads" aria-label="NASA ADS" target="_blank" rel="noopener noreferrer"><span class="label">NASA ADS</span></a></li>
+								<li><a href="mailto:jikim.astro@gmail.com" class="icon solid fa-envelope alt"><span class="label">Email</span></a></li>
+							</ul>
+							<p class="side-address">03722 Yonsei University, 50 Yonsei-Ro,
+								Seodaemun-Gu, Seoul, South Korea<br />
+								+82-(0)2-2123-8513</p>
+							<p class="side-credit">&copy; Jeein Kim. Credit:
+								<a href="https://html5up.net" target="_blank" rel="noopener noreferrer">HTML5 UP</a>.</p>
+						</div>
+					</aside>
+
+				<!-- Content -->
+					<div id="content">
+
+						<section id="about" class="about">
+							<div class="content-image">
+								<img src="images/header.jpg" alt="Radio telescope dishes of the Very Large Array" />
+							</div>
+							<h2>About me</h2>
+							<div class="about-text">
+								<p><strong>Hello!</strong><br />
+									I am a PhD student at Yonsei University, working in the IM&amp;GE group
+									led by Prof. Aeree Chung, my PhD supervisor.</p>
+								<p>My thesis focuses on <strong>the resolved neutral hydrogen (HI) properties</strong> of
+									local, hard X-ray selected AGN host galaxies, a research project called <strong>"BASS-HI"</strong> (details below). The working
+									title of my thesis is <strong>&ldquo;Resolved Neutral Hydrogen Properties of Local
+									Hard X-ray Selected Active Galactic Nuclei Host Galaxies&rdquo;</strong>
+									(하드 엑스선으로 선별된 근거리 활동성은하핵 호스트 은하들의 분해된 중성수소 특성; TBU).</p>
+								<p>I mainly use radio interferometric observations (e.g., VLA, ATCA, WSRT) of
+									<strong>HI spectral line emission</strong>, as well as <strong>radio continuum imaging</strong>, and have
+									experience with optical spectroscopy (e.g., Gemini/GMOS) &mdash; tools I use to
+									address my broader interest in galaxy evolution. I am interested not only in
+									local AGN host galaxies, but also in HI-bearing, low surface brightness dwarf
+									galaxies as building blocks of larger galaxies, which are often missed by
+									optical surveys.</p>
+								<p>In 2024, I spent a year as a visiting scholar at the National Radio
+									Astronomy Observatory (NRAO) in Socorro, NM, USA, under a <a href="https://bk21four.nrf.re.kr/index.do" target="_blank" rel="noopener noreferrer">Brain Korea 21
+									FOUR grant</a>.</p>
+							</div>
+						</section>
+
+						<!-- Research Interest blurb, parked here while the home page runs on the
+						     sidebar layout: the full write-up lives on research.html.
+						<p>My primary research interest lies in HI in X-ray AGN host galaxies -- how the
+							presence of an AGN affects the surrounding HI gas reservoir, and how Seyfert
+							galaxies experience Macro-scale (kpc-Mpc) feeding processes. I also have a
+							growing interest in HI-bearing, low surface brightness dwarf galaxies. Across
+							these topics, I use HI images and radio observations as my primary tools.</p>
+						-->
 
 					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; Jeein Kim. Credit: <a href="https://html5up.net" target="_blank" rel="noopener noreferrer">HTML5 UP</a>.</p>
-					</footer>
 
 			</div>
 
 		<!-- Back to top -->
-			<a href="#header" id="top-button" aria-label="Back to top">
+			<a href="#wrapper" id="top-button" aria-label="Back to top">
 				<i class="fas fa-chevron-up" aria-hidden="true"></i>
 				<span>Top</span>
 			</a>

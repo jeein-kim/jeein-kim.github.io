@@ -1,0 +1,215 @@
+%% ---------------------------------------------------------------------------
+%%  Academic CV -- Jeein Kim
+%%  Build:  pdflatex cv_short.tex   (run twice for the page-count in the footer)
+%% ---------------------------------------------------------------------------
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[top=0.6in,left=0.7in,right=0.7in,bottom=0.95in]{geometry}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,urlcolor=linkblue,linkcolor=linkblue,
+            pdftitle={Jeein Kim -- Curriculum Vitae},pdfauthor={Jeein Kim}]{hyperref}
+
+\definecolor{linkblue}{HTML}{18558A}
+\definecolor{rulegrey}{HTML}{B0B0B0}
+\definecolor{notegrey}{HTML}{5A5A5A}
+
+%% --- compile date: "Last update: Month Year" -------------------------------
+\newcommand{\monthname}{%
+  \ifcase\month\or JAN\or FEB\or MAR\or APR\or MAY\or JUN\or
+   JUL\or AUG\or SEP\or OCT\or NOV\or DEC\fi}
+\newcommand{\lastupdate}{Last update: \monthname\ \the\year}
+
+%% --- section heading: small-caps title over a thin rule --------------------
+\newcommand{\cvsection}[1]{%
+  \vspace{1.9ex}%
+  \noindent{\large\scshape\bfseries #1}\par\vspace{0.5ex}%
+  {\color{rulegrey}\hrule height 0.4pt}\par\vspace{1.1ex}%
+  \nopagebreak}
+
+%% --- run-in sub-heading ----------------------------------------------------
+\newcommand{\cvsubsection}[1]{%
+  \vspace{0.6ex}\noindent\textbf{#1}\par\vspace{0.6ex}\nopagebreak}
+
+%% --- one CV row: date column on the left, content on the right -------------
+\newlength{\datewidth}\setlength{\datewidth}{0.17\textwidth}
+\newcommand{\entry}[2]{%
+  \noindent\begin{minipage}[t]{\datewidth}\raggedright\small #1\end{minipage}%
+  \hfill%
+  \begin{minipage}[t]{\dimexpr\textwidth-\datewidth-1em\relax}#2\end{minipage}%
+  \par\vspace{0.7ex}}
+
+%% --- compact numbered list (publications) ----------------------------------
+\newenvironment{cvlist}%
+  {\begin{list}{\arabic{cvlistctr}.}%
+     {\usecounter{cvlistctr}%
+      \setlength{\leftmargin}{1.6em}\setlength{\labelwidth}{1.2em}%
+      \setlength{\labelsep}{0.4em}\setlength{\itemsep}{0.7ex}%
+      \setlength{\topsep}{0.4ex}\setlength{\parsep}{0pt}}}%
+  {\end{list}}
+\newcounter{cvlistctr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\small\color{rulegrey}Jeein Kim \textbullet\ \thepage\ / \pageref{cv:lastpage}}
+
+\begin{document}
+
+%% --- header ----------------------------------------------------------------
+\hfill{\small\color{notegrey}\lastupdate}\par\vspace{-1.2ex}
+\begin{center}
+  {\LARGE\bfseries Jeein Kim}\\[0.7ex]
+  {\small Ph.D. Candidate, Department of Astronomy, Yonsei University}\\[0.9ex]
+  {\small \href{mailto:jikim.astro@gmail.com}{jikim.astro@gmail.com} \textbullet\
+   +82-(0)2-2123-8513 \textbullet\
+   \href{https://orcid.org/0000-0002-3170-7434}{ORCID 0000-0002-3170-7434} \textbullet\
+   \href{https://ui.adsabs.harvard.edu/public-libraries/KmjWaYBAQIKqrcffK59Q2g}{ADS library}\\
+   \href{https://jeein-kim.github.io}{jeein-kim.github.io}}
+\end{center}
+\vspace{0.6ex}
+
+%% --- research interests ----------------------------------------------------
+\cvsection{Research Interests}
+
+Resolved neutral hydrogen (\textsc{Hi}) properties of local hard X-ray selected AGN host
+galaxies; the effect of nuclear activity on the surrounding cool gas reservoir and
+macro-scale (kpc--Mpc) gas feeding of Seyfert galaxies; \textsc{Hi}-bearing, low surface
+brightness dwarf galaxies. Primary tools are radio interferometric \textsc{Hi} line and
+continuum observations (VLA, ATCA, WSRT), complemented by optical spectroscopy
+(Gemini/GMOS).
+
+%% --- education -------------------------------------------------------------
+\cvsection{Education}
+
+\entry{2021 -- present}{\textbf{Ph.D. in Astronomy}, Yonsei University, Seoul, Korea\\
+  {\small Thesis: \emph{Resolved Neutral Hydrogen Properties of Local Hard X-ray Selected
+   Active Galactic Nuclei Host Galaxies} (expected 2027.08)\\
+   Advisor: Prof.\ Aeree Chung}}
+
+\entry{2016 -- 2021}{\textbf{B.S. in Astronomy}, Yonsei University, Seoul, Korea\\
+  {\small Minor in Electrical \& Electronic Engineering}}
+
+%% --- research experience ---------------------------------------------------
+\cvsection{Research Experience}
+
+\entry{2024}{\textbf{Visiting Scholar}, National Radio Astronomy Observatory (NRAO),
+  Socorro, NM, USA\\
+  {\small One-year visit supported by a
+  \href{https://bk21four.nrf.re.kr/index.do}{Brain Korea 21 FOUR} grant}}
+
+%% --- publications ----------------------------------------------------------
+\cvsection{Publications}
+
+\begin{cvlist}
+  \item \textbf{J. Kim} et al. (2026), \emph{BASS: LI. Cool gas supply of \textsc{Hi}-massive
+        local Seyfert galaxies}, A\&A, 708, A268
+        \hfill\href{https://ui.adsabs.harvard.edu/abs/2026A\%26A...708A.268K/abstract}{[ADS]}
+  \item \textbf{J. Kim} et al., \emph{Caterpillar in a Cabbage: A Milky Way-Sized
+        \textsc{Hi} Reservoir Around an Optically Faint Dwarf Galaxy}, ApJL, submitted
+  \item M. Powell et al.\ incl.\ \textbf{J. Kim} (2025), \emph{BASS: XLIV. Morphological
+        preferences of local hard X-ray selected AGNs}, A\&A, 700, A111
+        \hfill\href{https://ui.adsabs.harvard.edu/abs/2025A\%26A...700A.111P/abstract}{[ADS]}
+\end{cvlist}
+
+%% --- proposals -------------------------------------------------------------
+\cvsection{Observing Proposals}
+
+\cvsubsection{Principal Investigator}
+
+\entry{2025B}{Gemini-N/GMOS --- \emph{Probing the Nature of an \textsc{Hi} Gas-Dominated
+  Dwarf Galaxy Candidate via Long-Slit Spectroscopy}\\ {\small\color{notegrey} 1.45 hr}}
+
+\entry{2025A}{VLA/L-band --- \emph{Probing \textsc{Hi} Gas Surrounding an X-ray AGN Host,
+  NGC 3393}\\ {\small\color{notegrey} 25A-343; 4.7 hr}}
+
+\entry{2023B}{KVN single dish --- \emph{$^{12}$CO (1--0) observations of 6 hard X-ray
+  selected local AGN host galaxies}\\ {\small\color{notegrey} 12 hr}}
+
+\entry{2023B}{VLA/L-band --- \emph{Probing \textsc{Hi} Gas Surrounding BASS AGN Host
+  Galaxies}\\ {\small\color{notegrey} 23B-079; 64 hr}}
+
+\entry{2023A}{JCMT/HARP --- \emph{A CO (3--2) study of \textsc{Hi}-rich local X-ray AGN
+  hosts}\\ {\small\color{notegrey} 6.58 hr}}
+
+\cvsubsection{Co-Investigator}
+
+\entry{2026B}{VLA/K-band --- \emph{Expanding the Puzzle: A VLA Radio Atlas of the BAT AGN
+  Legacy Survey}\\ {\small\color{notegrey} 26B-213; 98.2 hr}}
+
+\entry{2026B}{Gemini-N/GMOS --- \emph{A Long-Slit Spectroscopy Census of Dwarf Companions
+  in Two Massive \textsc{Hi} Systems}\\ {\small\color{notegrey} 4.47 hr}}
+
+%% --- talks -----------------------------------------------------------------
+\cvsection{Invited \& Contributed Talks}
+
+\entry{2027.01}{AAS 249 Winter Meeting --- Salt Lake City, UT, USA}
+\entry{2026.08}{K-GMT Science Program Users Meeting 2026 --- Daejeon, Korea}
+\entry{2025.09}{PHISCC 2025 --- Cagliari, Italy}
+\entry{2025.04}{KAS 2025 Spring --- Gyeongju, Korea}
+\entry{2024.11}{40th Annual New Mexico Symposium --- Socorro, NM, USA}
+\entry{2024.08}{ICRAR-UWA Seminar --- Perth, Australia}
+\entry{2024.07}{Los Alamos Astro Seminar --- LANL, NM, USA}
+\entry{2024.04}{BASS2024: New Horizons for Understanding Nearby AGN --- Maryland, USA}
+\entry{2024.02}{2024 Winter SKA-Korea Workshop --- Busan, Korea}
+\entry{2023.12}{ICRAR Student Day, University of Western Australia --- Perth, Australia}
+\entry{2023.12}{University of Queensland Astro Group Seminar --- Brisbane, Australia}
+\entry{2023.11}{EA-SKA Workshop 2023 --- Jeju, Korea}
+\entry{2023.10}{NRAO Wednesday Talk --- Socorro, NM, USA}
+\entry{2023.03}{PHISCC 2023 --- Cape Town, South Africa}
+\entry{2023.01}{SPHEREx AGN Workshop --- Cheonan, Korea}
+\entry{2022.07}{CGER1 Kick-off Meeting --- Gangneung, Korea}
+\entry{2022.02}{Env22 Workshop --- Online}
+
+%% --- posters ---------------------------------------------------------------
+\cvsection{Posters}
+
+\entry{2026.02}{Asia-Pacific SKA --- Chiang Mai, Thailand}
+\entry{2023.10}{KAS 2023 Fall --- Jeju, Korea}
+\entry{2022.11}{The 6th Yonsei Astro Poster Jamboree --- \emph{first place} --- Seoul, Korea}
+\entry{2022.08}{IAU General Assembly 2022 --- Busan, Korea}
+\entry{2022.02}{ASIAA Galaxy Evolution Workshop 2021 --- Online}
+\entry{2021.12}{The 5th Yonsei Astro Poster Jamboree --- Online}
+\entry{2021.10}{KAS 2021 Fall --- Jeju, Korea}
+
+%% --- teaching --------------------------------------------------------------
+\cvsection{Teaching}
+
+\entry{2023 Spring}{Teaching Assistant, \emph{Radio Astronomy} (4th-year undergraduate)}
+\entry{2022 Fall}{Teaching Assistant, \emph{Astrophysics (2)} (4th-year undergraduate)}
+\entry{2022 Spring}{Teaching Assistant, \emph{Radio Astronomy} (4th-year undergraduate)}
+\entry{2021 Fall}{Teaching Assistant, \emph{Understanding of Space} (general education)}
+\entry{2021 Spring}{Teaching Assistant, \emph{Introduction to Astrophysics (1)}
+  (2nd-year undergraduate)}
+
+%% --- service ---------------------------------------------------------------
+\cvsection{Service \& Outreach}
+
+\entry{2026.12}{Local Organizing Committee, 2026 SKA-Korea Winter Workshop ---
+  Yonsei University, Korea}
+\entry{2025.11}{Chair of the Organizing Committee, The 10th Astro Poster Jamboree ---
+  Yonsei University, Korea}
+\entry{2024.10}{Science Staff, The Fall Open House at the VLA --- Socorro, NM, USA}
+\entry{2022.11}{Chair of the Organizing Committee, The 6th Astro Poster Jamboree ---
+  Yonsei University, Korea}
+\entry{2022.08}{Volunteer, IAU General Assembly 2022 --- Busan, Korea}
+\entry{2022.04}{Volunteer, KAS 2022 Spring --- Busan, Korea}
+\entry{2018}{Mentor, NASA Edu Camp, Incheon Science Elite Program}
+
+%% --- schools ---------------------------------------------------------------
+\cvsection{Schools \& Workshops Attended}
+
+\entry{2026.11}{ngVLA International Science Conference 2026 --- Sendai, Japan}
+\entry{2024.01}{2024 SPHEREx-7DT Joint Workshop --- Jecheon, Korea}
+\entry{2023.07}{The 7th ALMA Summer School --- Seobaeksan Observatory, Korea}
+\entry{2023.05}{The 20th Synthesis Imaging School --- Socorro, NM, USA}
+\entry{2022.10}{9th VLA Data Reduction Workshop --- Socorro, NM, USA}
+\entry{2021.07}{2021 KIAS Summer School on Extragalactic Astronomy and Cosmology ---
+  Online \emph{(team awarded first place)}}
+
+\label{cv:lastpage}
+\end{document}

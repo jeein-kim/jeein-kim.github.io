@@ -9,6 +9,9 @@
 		<title>Research &mdash; Jeein Kim</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;family=Noto+Sans+KR:wght@300;400;700&amp;display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/custom.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -18,27 +21,49 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
 		<link rel="manifest" href="/images/favicon/site.webmanifest" />
 	</head>
-	<body class="is-preload research-page">
+	<body class="is-preload research-page sidebar-layout">
 
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<h1>Research</h1>
-						<p>Jeein Kim</p>
-					</header>
+				<!-- Sidebar -->
+					<aside id="sidebar">
+						<div class="sidebar-top">
+							<img class="side-photo" src="images/profile.jpg" alt="Jeein Kim" />
+							<h1 class="side-name">Jeein Kim</h1>
+							<p class="side-role">PhD Student<br />
+								Dept. of Astronomy, Yonsei Univ.</p>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="#bass-hi">BASS-HI</a></li>
-							<li><a href="#hi-dwarfs">HI-bearing Dwarfs</a></li>
-							<li><a href="#others">Others</a></li>
-						</ul>
-					</nav>
+							<nav class="side-nav">
+								<ul>
+									<li><a href="index.html">Home</a></li>
+									<li><a href="research.html" class="active">Research Interest</a></li>
+									<li class="side-sub"><ul>
+										<li><a href="#bass-hi" class="scrolly">BASS-HI</a></li>
+										<li><a href="#hi-dwarfs" class="scrolly">HI-bearing Dwarfs</a></li>
+										<li><a href="#others" class="scrolly">Others</a></li>
+									</ul></li>
+									<li><a href="cv.html">CV</a></li>
+								</ul>
+							</nav>
+						</div>
 
-				<!-- Main -->
+						<div class="sidebar-bottom">
+							<h2>Contact</h2>
+							<ul class="icons">
+								<li><a href="https://orcid.org/0000-0002-3170-7434" class="icon brands fa-orcid alt" target="_blank" rel="noopener noreferrer"><span class="label">ORCID</span></a></li>
+								<li><a href="https://ui.adsabs.harvard.edu/public-libraries/KmjWaYBAQIKqrcffK59Q2g" class="icon alt icon-ads" aria-label="NASA ADS" target="_blank" rel="noopener noreferrer"><span class="label">NASA ADS</span></a></li>
+								<li><a href="mailto:jikim.astro@gmail.com" class="icon solid fa-envelope alt"><span class="label">Email</span></a></li>
+							</ul>
+							<p class="side-address">03722 Yonsei University, 50 Yonsei-Ro,
+								Seodaemun-Gu, Seoul, South Korea<br />
+								+82-(0)2-2123-8513</p>
+							<p class="side-credit">&copy; Jeein Kim. Credit:
+								<a href="https://html5up.net" target="_blank" rel="noopener noreferrer">HTML5 UP</a>.</p>
+						</div>
+					</aside>
+
+				<!-- Content -->
 					<div id="main">
 
 						<!-- BASS-HI -->
@@ -47,13 +72,15 @@
 							<p>The BASS-HI survey is the largest resolved HI imaging survey of local hard
 								X-ray-selected AGN host galaxies to date, built on the
 								<a href="https://www.bass-survey.com/index.html" target="_blank" rel="noopener noreferrer">BASS survey</a>.
-								Comprising ~100 targets selected from the parent BASS sample based on distance
-								and observability, the survey combines new VLA and ATCA observations with
-								archival data from WSRT, GMRT, and other facilities. Data collection is now
-								complete (2026.09), and a catalog paper presenting the full sample is currently
-								in preparation. The survey is designed to address two key questions: how the
-								presence of an AGN affects the surrounding HI gas reservoir, and how Seyfert
-								galaxies experience macro-scale (kpc&ndash;Mpc) feeding processes.</p>
+								Hard X-ray selection is less sensitive to obscuration by the torus and
+								surrounding dust, minimizing AGN type bias and allowing for the construction
+								of one of the most complete AGN samples in the local universe. The survey is
+								designed to address two key questions: how the presence of an
+								AGN affects the surrounding HI gas reservoir, and how Seyfert galaxies
+								experience macro-scale (kpc&ndash;Mpc) feeding processes. Comprising ~100
+								targets selected from the parent BASS sample based on distance and
+								observability, the survey combines new VLA and ATCA observations with archival
+								data from WSRT, GMRT, and other facilities.</p>
 
 							<article class="research-paper">
 								<h3>1) BASS: LI. Cool gas supply of HI-massive local Seyfert galaxies (<a href="https://ui.adsabs.harvard.edu/abs/2026A%26A...708A.268K/abstract" target="_blank" rel="noopener noreferrer">ADS</a>)</h3>
@@ -82,7 +109,8 @@
 										massive systems within their groups &mdash; more likely to accrete gas
 										than lose it.</li>
 									<li>Galaxies with more extended HI disks show stronger AGN activity, and
-										this becomes even tighter when neighboring galaxies are HI-poor.</li>
+										this becomes even tighter when there are more than one HI-poor
+										neighboring galaxies.</li>
 								</ul>
 								<p><strong>Implications:</strong> Extended HI disks are commonly linked to
 									external processes such as galaxy interactions. The correlation between HI
@@ -93,7 +121,10 @@
 
 							<article class="research-paper">
 								<h3>2) BASS-HI catalog</h3>
-								<p>Current ongoing project (TBU).</p>
+								<p>Data collection is now complete (2026.09), and a catalog paper presenting the
+									full sample is currently in preparation. This will be the largest HI imaging
+									sample of local hard X-ray-selected AGN host galaxies to date, expected to
+									enable robust statistical analyses.</p>
 							</article>
 						</section>
 
@@ -137,26 +168,40 @@
 						<!-- Others -->
 						<section id="others" class="main">
 							<h2>Others</h2>
+
+							<article class="research-paper">
+								<h3>BARS: BAT AGN Radio Survey</h3>
+								<p>This project builds a multi-frequency radio atlas (~87.5 MHz&ndash;22 GHz) of
+									the <em>Swift</em>-BAT hard X-ray-selected AGN sample to determine the origin
+									of nuclear radio emission (jet vs. corona vs. star formation) and test its
+									relationship to black hole mass, accretion rate, and X-ray luminosity. Prior
+									high-resolution VLA 22 GHz work found compact radio cores in nearly all
+									sources and radio/X-ray luminosities consistent with coronal emission,
+									arguing against the classic scaled-down-jet picture. Data combine archival
+									surveys (GLEAM, LoTSS, RACS, FIRST/NVSS, VLASS) with new BASS 22 GHz VLA
+									imaging and Pan-STARRS-1 optical cutouts.</p>
+								<p><strong>My contribution:</strong> high-resolution L-band imaging from
+									VLA-C/20A-123 (supplemented by
+									D/<a href="https://library.nrao.edu/proposals/?utf8=✓&amp;search_field=all_fields&amp;q=23B-079" target="_blank" rel="noopener noreferrer">23B-079</a>
+									where needed). I've also recently joined the K-band program
+									(C/<a href="https://library.nrao.edu/proposals/?utf8=✓&amp;search_field=all_fields&amp;q=26B-213" target="_blank" rel="noopener noreferrer">26B-213</a>).</p>
+								<p><a href="https://github.com/maconmagno/BARS" target="_blank" rel="noopener noreferrer">Read more &rarr;</a></p>
+							</article>
 						</section>
 
-						<!-- Back -->
+						<!-- Top -->
 						<section class="main special">
 							<ul class="actions special">
-								<li><a href="index.html" class="button small">Back to home</a></li>
+								<li><a href="#wrapper" class="button small scrolly">Top</a></li>
 							</ul>
 						</section>
 
 					</div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; Jeein Kim. Credit: <a href="https://html5up.net" target="_blank" rel="noopener noreferrer">HTML5 UP</a>.</p>
-					</footer>
-
 			</div>
 
 		<!-- Back to top -->
-			<a href="#header" id="top-button" aria-label="Back to top">
+			<a href="#wrapper" id="top-button" aria-label="Back to top">
 				<i class="fas fa-chevron-up" aria-hidden="true"></i>
 				<span>Top</span>
 			</a>
