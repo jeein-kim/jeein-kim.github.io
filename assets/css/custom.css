@@ -11,17 +11,22 @@
 	body {
 		background-color: #ffffff;
 		background-image: none;
-		color: #333333;
+		color: #000000;
 	}
 
 /* --- Type ------------------------------------------------------------------
-   Lato for Latin text, in place of the template's Source Sans Pro. Lato has no
-   Hangul, so Noto Sans KR follows it in the stack and picks up the Korean runs
-   (the thesis title) rather than leaving them to whatever each visitor has. */
+   Inter throughout: a web-hosted grotesque in the Helvetica line, so every
+   visitor sees the same letterforms rather than Helvetica Neue on Apple and
+   Arial elsewhere. Helvetica Neue stays next in the stack as the local
+   stand-in while the webfont loads. Inter has no Hangul, so Noto Sans KR
+   follows and picks up the Korean runs such as the thesis title. */
 
 	body, input, select, textarea,
-	h1, h2, h3, h4, h5, h6 {
-		font-family: "Lato", "Noto Sans KR", Helvetica, sans-serif;
+	h1, h2, h3, h4, h5, h6,
+	.side-nav,
+	.side-role,
+	.button {
+		font-family: "Inter", "Helvetica Neue", Helvetica, Arial, "Noto Sans KR", sans-serif;
 	}
 
 	h1, h2, h3, h4, h5, h6,
@@ -47,7 +52,7 @@
 
 	.icon.alt {
 		border-color: rgba(0, 0, 0, 0.2);
-		color: #333333;
+		color: #000000;
 	}
 
 		.icon.alt:hover {
@@ -70,7 +75,7 @@
 	#main a:hover,
 	#nav,
 	#nav a:hover {
-		color: #333333;
+		color: #000000;
 	}
 
 	#main h1, #main h2, #main h3, #main h4, #main h5, #main h6,
@@ -82,7 +87,7 @@
 	}
 
 	#main .icon.alt {
-		color: #333333;
+		color: #000000;
 	}
 
 /* --- Header ---------------------------------------------------------------- */
@@ -172,7 +177,7 @@
 			font-size: 0.7em;
 			line-height: 1;
 			letter-spacing: 0;
-			color: #999999;
+			color: #000000;
 			white-space: nowrap;
 			pointer-events: none;
 			opacity: 0;
@@ -345,7 +350,7 @@
 		border: solid 1px rgba(0, 0, 0, 0.1);
 		border-radius: 0.35em;
 		box-shadow: 0 0.2em 0.6em rgba(0, 0, 0, 0.15);
-		color: #444444;
+		color: #000000;
 		font-size: 0.8em;
 		line-height: 1.5;
 		pointer-events: none;
@@ -389,7 +394,7 @@
 		.cv-page #main .entry-meta {
 			flex: 0 0 auto;
 			text-align: right;
-			color: #909090;
+			color: #000000;
 			font-size: 0.9em;
 		}
 
@@ -397,7 +402,7 @@
 		.cv-page #main .entry-title {
 			display: block;
 			margin-top: 0.15em;
-			color: #a0a0a0;
+			color: #000000;
 			font-size: 0.9em;
 			font-style: italic;
 		}
@@ -436,7 +441,7 @@
 
 	.cv-page #main .course-level {
 		font-size: 0.8em;
-		color: #909090;
+		color: #000000;
 	}
 
 /* --- TA table ---------------------------------------------------------------
@@ -484,14 +489,14 @@
 
 	.cv-page #main .section-note {
 		font-size: 0.8em;
-		color: #909090;
+		color: #000000;
 		margin-top: 0.75em;
 	}
 
 	/* --- Research text highlights ----------------------------------------------- */
 
 .purple-highlight {
-    color: #7b5aa6;
+    color: #000000;
     font-weight: 500;
 }
 
@@ -543,7 +548,7 @@
 			display: block;
 			font-size: 1em;
 			line-height: 1;
-			color: #999999;
+			color: #000000;
 		}
 
 		#top-button span {
@@ -552,7 +557,7 @@
 			font-size: 0.55em;
 			letter-spacing: 0.05em;
 			line-height: 1;
-			color: #999999;
+			color: #000000;
 		}
 
 	@media screen and (max-width: 736px) {
@@ -600,7 +605,7 @@
 		overflow-y: auto;
 		/* cool mist -- a neutral half-step off the photo's sky */
 		background-color: #E3E8EA;
-		color: #33474f;
+		color: #000000;
 		border-right: 0;
 	}
 
@@ -616,19 +621,17 @@
 
 		.side-photo {
 			display: block;
-			width: 10.35em;
-			height: 10.35em;
+			width: 8em;
+			height: 8em;
 			margin: 0 auto 1.2em auto;
 			-o-object-fit: cover;
 			object-fit: cover;
-			border-radius: 50%;
-			border: solid 4px #ffffff;
-			box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+			border-radius: 0.3em;
 		}
 
 		.sidebar-layout #sidebar h1,
 		.sidebar-layout #sidebar h2 {
-			color: #12313c;
+			color: #000000;
 		}
 
 		.sidebar-layout .side-name {
@@ -636,7 +639,7 @@
 			font-size: 1.25em;
 			font-weight: 700;
 			line-height: 1.2;
-			color: #12313c;
+			color: #000000;
 		}
 
 		.side-role {
@@ -644,7 +647,7 @@
 			font-size: 0.6em;
 			line-height: 1.5;
 			letter-spacing: 0;
-			color: #6b7c84;
+			color: #000000;
 		}
 
 /* page links: flat rows, the current page marked with a soft pill */
@@ -666,7 +669,7 @@
 				padding: 0.55em 0.9em;
 				font-size: 0.85em;
 				letter-spacing: 0.02em;
-				color: #33474f;
+				color: #000000;
 				text-decoration: none;
 				border-bottom: 0;
 				border-radius: 0.25em;
@@ -678,12 +681,12 @@
 
 				.side-nav a:hover {
 					background-color: rgba(255, 255, 255, 0.6);
-					color: #12313c;
+					color: #000000;
 				}
 
 				.side-nav a.active {
 					background-color: #ffffff;
-					color: #12313c;
+					color: #000000;
 					font-weight: 600;
 				}
 
@@ -702,13 +705,13 @@
 			.side-nav .side-sub a {
 				padding: 0.35em 0.9em 0.35em 1.9em;
 				font-size: 0.72em;
-				color: #5d7079;
+				color: #000000;
 				border-radius: 0.2em;
 			}
 
 				.side-nav .side-sub a:hover {
 					background-color: rgba(255, 255, 255, 0.45);
-					color: #12313c;
+					color: #000000;
 				}
 
 	.sidebar-layout .sidebar-bottom h2 {
@@ -730,16 +733,16 @@
 		font-size: 0.55em;
 		line-height: 1.5;
 		letter-spacing: 0;
-		color: #8d9aa1;
+		color: #000000;
 	}
 
 		.side-credit a {
-			color: #8d9aa1;
+			color: #000000;
 			border-bottom-color: rgba(141, 154, 161, 0.4);
 		}
 
 			.side-credit a:hover {
-				color: #33474f;
+				color: #000000;
 			}
 
 	.side-address {
@@ -747,14 +750,14 @@
 		font-size: 0.6em;
 		line-height: 1.6;
 		letter-spacing: 0;
-		color: #7b8b92;
+		color: #000000;
 	}
 
 /* contact icons: dark glyphs, tinted rings to sit on the pale rail */
 
 	.sidebar-layout #sidebar .icon.alt {
 		border-color: rgba(18, 49, 60, 0.25);
-		color: #33474f;
+		color: #000000;
 	}
 
 		.sidebar-layout #sidebar .icon.alt:hover {
@@ -810,7 +813,8 @@
 		.sidebar-layout #wrapper > #main h2 {
 			margin: 0 0 0.8em 0;
 			font-size: 1.65em;
-			border-left: 4px solid #12313c;
+			font-weight: 700;
+			border-left: 4px solid #000000;
 			padding-left: 0.6em;
 		}
 
@@ -818,7 +822,8 @@
 		.sidebar-layout #wrapper > #main h3 {
 			margin: 2em 0 0.8em 0;
 			font-size: 1.15em;
-			color: #12313c;
+			font-weight: 700;
+			color: #000000;
 		}
 
 			.sidebar-layout #wrapper > #main h3::before {
@@ -827,7 +832,7 @@
 				width: 0.5em;
 				height: 0.5em;
 				margin-right: 0.55em;
-				background-color: #4a6c78;
+				background-color: #000000;
 				vertical-align: middle;
 			}
 
@@ -1029,20 +1034,22 @@
    at these widths it needs to come back up */
 
 		.sidebar-layout #wrapper > #main {
-			font-size: 1em;
+			font-size: 1.12em;
 		}
 
 		.sidebar-layout .about-text p {
-			font-size: 1em;
+			font-size: 1.15em;
 		}
 
+		/* the column scales the headings too, so pull them back by the same
+		   factor -- only the plain text should grow */
 		.sidebar-layout #content h2,
 		.sidebar-layout #wrapper > #main h2 {
-			font-size: 1.45em;
+			font-size: 1.3em;
 		}
 
 		.sidebar-layout #wrapper > #main h3 {
-			font-size: 1.15em;
+			font-size: 1.03em;
 		}
 
 	}
@@ -1135,7 +1142,7 @@
 			font-weight: 900;
 			font-size: 0.45em;
 			margin-left: 0.9em;
-			color: #8d9aa1;
+			color: #000000;
 			vertical-align: middle;
 			display: inline-block;
 			-moz-transition: -moz-transform 0.2s ease, color 0.2s ease;
@@ -1145,7 +1152,7 @@
 		}
 
 		.cv-page .collapsible > h2:hover::after {
-			color: #12313c;
+			color: #000000;
 		}
 
 		.cv-page .collapsible.is-open > h2::after {
@@ -1181,7 +1188,7 @@
 		margin: 1.25em 0 1.25em 0;
 		text-align: right;
 		font-size: 0.72em;
-		color: #9aa5ab;
+		color: #000000;
 	}
 
 		.cv-page .section-controls .sep {
@@ -1205,13 +1212,48 @@
 			font-weight: 400;
 			letter-spacing: 0;
 			text-transform: none;
-			color: #5d7079;
+			color: #000000;
 			cursor: pointer;
 		}
 
 			.cv-page #main .link-button:hover {
 				background: none;
 				box-shadow: none;
-				color: #12313c;
+				color: #000000;
 				text-decoration: underline;
 			}
+
+/* --- About me: portrait set into the text ------------------------------------
+   Newsletter style: the photo floats right partway down the column and the
+   prose runs around it, rather than sitting in its own gutter. It enters after
+   the second paragraph so the opening lines stay full measure. */
+
+	.about-photo {
+		float: right;
+		width: 32%;
+		margin: 0.4em 0 1.25em 1.75em;
+	}
+
+		.about-photo img {
+			display: block;
+			width: 100%;
+			height: auto;
+			border-radius: 0.25em;
+		}
+
+	.about-text::after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+
+	@media screen and (max-width: 980px) {
+
+		.about-photo {
+			float: none;
+			width: 60%;
+			max-width: 18em;
+			margin: 1.25em auto 1.5em auto;
+		}
+
+	}
