@@ -1257,3 +1257,15 @@
 		}
 
 	}
+
+/* --- Publications: title on its own line, citation smaller beneath ---------- */
+
+	.cv-page #main .pub-title {
+		display: block;
+	}
+
+	.cv-page #main .pub-meta {
+		display: block;
+		margin-top: 0.2em;
+		font-size: 0.9em;
+	}

@@ -1,0 +1,42 @@
+@ARTICLE{2026A&A...708A.268K,
+       author = {{Kim}, Jeein and {Chung}, Aeree and {Wong}, Oiwei Ivy and {Baek}, Junhyun and {Murugeshan}, Chandrashekar and {Koss}, Michael J. and {Oh}, Kyuseok and {Bauer}, Franz Erik and {Chang}, Chin-Shin and {Diaz}, Yaherlyn and {Ichikawa}, Kohei and {Kakkad}, Darshan and {Kim}, Minjin and {Magno}, Macon and {del Moral-Castro}, Ignacio and {Mushotzky}, Richard and {Peca}, Alessandro and {Ricci}, Claudio and {Signorini}, Matilde and {Parra Tello}, Miguel and {Trakhtenbrot}, Benny and {Woo}, Jong-Hak},
+        title = "{BASS: LI. Cool gas supply of HI-massive local Seyfert galaxies}",
+      journal = {\aap},
+     keywords = {galaxies: active, galaxies: evolution, galaxies: ISM, galaxies: nuclei, galaxies: Seyfert, Astrophysics of Galaxies},
+         year = 2026,
+        month = apr,
+       volume = {708},
+          eid = {A268},
+        pages = {A268},
+          doi = {10.1051/0004-6361/202556901},
+archivePrefix = {arXiv},
+       eprint = {2603.15752},
+ primaryClass = {astro-ph.GA},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2026A&A...708A.268K},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{2025A&A...700A.111P,
+       author = {{Parra Tello}, Miguel and {Bauer}, Franz E. and {De Cicco}, Demetra and {Doll}, Goran and {Koss}, Michael and {Treister}, Ezequiel and {Finlez}, Carolina and {Troncoso}, Marco and {Auge}, Connor and {del Moral-Castro}, I. and {Chung}, Aeree and {Gupta}, Kriti K. and {Kim}, Jeein and {Oh}, Kyuseok and {Ricci}, Claudio and {Ricci}, Federica and {Rojas}, Alejandra and {Caglar}, Turgay and {Harrison}, Fiona and {Powell}, Meredith C. and {Stern}, Daniel and {Trakhtenbrot}, Benny and {Megan Urry}, C.},
+        title = "{BASS: XLIV. Morphological preferences of local hard X-ray selected AGNs}",
+      journal = {\aap},
+     keywords = {galaxies: active, galaxies: evolution, galaxies: nuclei, Astrophysics of Galaxies},
+         year = 2025,
+        month = aug,
+       volume = {700},
+          eid = {A111},
+        pages = {A111},
+          doi = {10.1051/0004-6361/202554990},
+archivePrefix = {arXiv},
+       eprint = {2506.21800},
+ primaryClass = {astro-ph.GA},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2025A&A...700A.111P},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{inrevision,
+       author = {{Kim}, Jeein and {Chung}, Aeree and {Lim}, Sungsoon and {Bang}, Taehyeon},
+        title = "{(working title) Caterpillar in a Cabbage}",
+      journal = {\apj},
+}
+

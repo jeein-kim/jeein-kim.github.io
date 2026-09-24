@@ -1,6 +1,6 @@
 %% ---------------------------------------------------------------------------
 %%  Academic CV -- Jeein Kim
-%%  Build:  xelatex cv_short.tex    (run twice for the page-count in the footer)
+%%  Build:  xelatex cv_long.tex     (run twice for the page-count in the footer)
 %%          XeLaTeX is required: the CV is set in Times New Roman, a system font.
 %% ---------------------------------------------------------------------------
 \documentclass[11pt,a4paper]{article}
@@ -21,7 +21,6 @@
 
 %% --- left-aligned fixed-width column used by every CV table ---------------
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
-\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
 \usepackage[colorlinks=true,urlcolor=linkblue,linkcolor=linkblue,
             pdftitle={Jeein Kim -- Curriculum Vitae},pdfauthor={Jeein Kim}]{hyperref}
 
@@ -57,7 +56,7 @@
 
 %% --- section heading: small-caps title over a thin rule --------------------
 \newcommand{\cvsection}[2][]{%
-  \cvneedspace{6\baselineskip}%  keep a heading with the first rows of its table
+  \cvneedspace{10\baselineskip}%  keep a heading with the first rows of its table
   \vspace{1.9ex}%
   \noindent{\fontsize{13}{15.6}\selectfont\bfseries
     \hspace*{0.45em}\raisebox{0.12em}{\rotatebox[origin=c]{45}{\rule{0.35em}{0.35em}}}\hspace{0.4em}
@@ -125,14 +124,25 @@
 \noindent{\hrule height 1.2pt}
 \par\vspace{1.6ex}
 
+%% --- research interests ----------------------------------------------------
+\cvsection{Research Interests}
+
+Resolved neutral hydrogen (\textsc{Hi}) properties of local hard X-ray selected AGN host
+galaxies; the effect of nuclear activity on the surrounding cool gas reservoir and
+macro-scale (kpc--Mpc) gas feeding of Seyfert galaxies; \textsc{Hi}-bearing, low surface
+brightness dwarf galaxies. Primary tools are radio interferometric \textsc{Hi} line and
+continuum observations (VLA, ATCA, WSRT), complemented by optical spectroscopy
+(Gemini/GMOS).
+
 %% --- education -------------------------------------------------------------
 \cvsection{Education}
 
-\entry{2021 -- present}{\textbf{Ph.D. in Astronomy}, Yonsei University, Seoul, S.Korea\\
+\entry{2021 -- present}{\textbf{Ph.D. in Astronomy}, Yonsei University, Seoul, Korea\\
   {\small Thesis: \emph{Resolved Neutral Hydrogen Properties of Local Hard X-ray Selected
-   Active Galactic Nuclei Host Galaxies} (expected 2027.08)\sidenote{Advisor: Prof.\ Aeree Chung}}}
+   Active Galactic Nuclei Host Galaxies} (expected 2027.08)\\
+   Advisor: Prof.\ Aeree Chung}}
 
-\entry{2016 -- 2021}{\textbf{B.S. in Astronomy}, Yonsei University, Seoul, S.Korea\\
+\entry{2016 -- 2021}{\textbf{B.S. in Astronomy}, Yonsei University, Seoul, Korea\\
   {\small Minor in Electrical \& Electronic Engineering}}
 
 %% --- research experience ---------------------------------------------------
@@ -150,21 +160,34 @@
 \cvsection{Grants, Awards, and Scholarships}
 
 {\small
-\begin{longtable}{@{}L{0.14\textwidth}L{0.50\textwidth}L{0.12\textwidth}L{0.13\textwidth}@{}}
+\begin{longtable}{@{}L{0.15\textwidth}L{0.47\textwidth}L{0.14\textwidth}L{0.13\textwidth}@{}}
   \textbf{Date} & \textbf{Award} & \textbf{Type} & \textbf{Amount (USD)} \\[0.5ex]
   \endfirsthead
   \textbf{Date} & \textbf{Award} & \textbf{Type} & \textbf{Amount (USD)} \\[0.5ex]
   \endhead
-  \textbf{2024} & \textbf{NRF/YU Overseas Training Support of Outstanding Graduate Students In the Brain Korea 21 FOUR} & \textbf{Scholarship} & \textbf{\$22k} \\
-  2021 -- 2026 & NRF BK21 FOUR Program & Scholarship & \$52k \\
+  \textbf{2024} & \textbf{NRF/YU Overseas Training Support of Outstanding Graduate Students In the BK21FOUR (Brain Korea 21 Four) Project} & \textbf{Scholarship} & \textbf{\$22k} \\
+  2021 -- 2026 & NRF BK21 FOUR Project & Scholarship & \$52k \\
+  2021 -- 2026 & YU Graduate Research Assistantship (GSRA) & Scholarship & \$13k \\
   2023B, 2024A & SKA-Korea Large Facility Program Grant & Travel & \$7.8k \\
+  2021 -- 2023 & YU Teaching Assistantship (TA) & Scholarship & \$9.5k \\
+  2021, 2022, 2023 & KAS Volunteer Scholarship & Scholarship & \$0.6k \\
   2020B & IHEI (YU) Innovation Support Scholarship & Award & \$1.0k \\
   2020A & ICTL (YU) Tutoring Scholarship & Scholarship & \$0.2k \\
   2018A -- 2019A & YU International Campus RA Scholarship & Scholarship & \$7.0k \\
+  2017A -- 2017B & YU Volunteer Scholarship & Scholarship & \$1.2k \\
 \end{longtable}}
-\noindent{\footnotesize\color{notegrey}KRW/USD=1{,}200\\
-NRF: National Research Foundation of Korea; YU: Yonsei University.}
+{\footnotesize\color{notegrey}Amounts converted from KRW at 1{,}200~KRW per USD. Semesters follow the Korean academic year: A (Mar--Aug), B (Sep--Feb).\\
+NRF: National Research Foundation of Korea; YU: Yonsei University; KAS: Korean Astronomical Society; IHEI: Institute for Higher Education Innovation; ICTL: Innovation Center for Teaching and Learning.}
 
+
+%% --- research skills -------------------------------------------------------
+\cvsection{Research Skills}
+
+{\small
+\begin{longtable}{@{}L{0.22\textwidth}L{0.68\textwidth}@{}}
+  Programming languages & Python \\
+  Software & CASA, AIPS, GIPSY, 3D-Barolo, DRAGONS, SoFiA-2, MIRIAD (beginner) \\
+\end{longtable}}
 
 %% --- publications ----------------------------------------------------------
 \cvsection[\href{https://ui.adsabs.harvard.edu/public-libraries/KmjWaYBAQIKqrcffK59Q2g}{ADS library}]{Publications}
@@ -183,10 +206,10 @@ NRF: National Research Foundation of Korea; YU: Yonsei University.}
 %% --- proposals -------------------------------------------------------------
 \cvsection{Successful Observing Proposals}
 
-\cvsubsection{		As Principal Investigator}
+\cvsubsection{As Principal Investigator}
 
 {\small
-\begin{longtable}{@{}L{0.07\textwidth}L{0.15\textwidth}L{0.50\textwidth}L{0.16\textwidth}@{}}
+\begin{longtable}{@{}L{0.08\textwidth}L{0.20\textwidth}L{0.44\textwidth}L{0.16\textwidth}@{}}
   \textbf{Semester} & \textbf{Telescope} & \textbf{Proposal} & \textbf{ID / hours} \\[0.5ex]
   \endfirsthead
   \textbf{Semester} & \textbf{Telescope} & \textbf{Proposal} & \textbf{ID / hours} \\[0.5ex]
@@ -198,10 +221,10 @@ NRF: National Research Foundation of Korea; YU: Yonsei University.}
   2023A & JCMT/HARP & \emph{A CO (3--2) study of \textsc{Hi}-rich local X-ray AGN hosts} & 6.58 hr \\
 \end{longtable}}
 
-\cvsubsection{		As Co-Investigator}
+\cvsubsection{As Co-Investigator}
 
 {\small
-\begin{longtable}{@{}L{0.07\textwidth}L{0.15\textwidth}L{0.50\textwidth}L{0.16\textwidth}@{}}
+\begin{longtable}{@{}L{0.08\textwidth}L{0.20\textwidth}L{0.44\textwidth}L{0.16\textwidth}@{}}
   \textbf{Semester} & \textbf{Telescope} & \textbf{Proposal} & \textbf{ID / hours} \\[0.5ex]
   \endfirsthead
   \textbf{Semester} & \textbf{Telescope} & \textbf{Proposal} & \textbf{ID / hours} \\[0.5ex]
@@ -211,26 +234,38 @@ NRF: National Research Foundation of Korea; YU: Yonsei University.}
 \end{longtable}}
 
 %% --- talks -----------------------------------------------------------------
-\cvsection{Selected Talks \& Posters}
+\cvsection{Talks \& Posters}
 
 {\small
-\begin{longtable}{@{}L{0.085\textwidth}L{0.46\textwidth}L{0.14\textwidth}R{0.21\textwidth}@{}}
+\begin{longtable}{@{}L{0.085\textwidth}L{0.40\textwidth}L{0.145\textwidth}L{0.265\textwidth}@{}}
   \textbf{Date} & \textbf{Name} & \textbf{Type} & \textbf{Location} \\[0.5ex]
   \endfirsthead
   \textbf{Date} & \textbf{Name} & \textbf{Type} & \textbf{Location} \\[0.5ex]
   \endhead
   2027.01 & AAS 249 Winter Meeting (TBD) & Contrib. talk & Salt Lake City, UT, USA \\
   2026.11 & ngVLA International Science Conference 2026 (TBD) & Poster & Sendai, Japan \\
+  2026.08 & K-GMT Science Program Users Meeting 2026 & Contrib. talk & Daejeon, Korea \\
   2026.02 & Asia-Pacific SKA & Poster & Chiang Mai, Thailand \\
   2025.09 & PHISCC 2025 & Contrib. talk & Cagliari, Italy \\
+  2025.04 & KAS 2025 Spring & Contrib. talk & Gyeongju, Korea \\
   2024.11 & 40th Annual New Mexico Symposium & Contrib. talk & Socorro, NM, USA \\
   2024.08 & ICRAR-UWA Seminar & Seminar & Perth, Australia \\
   2024.07 & Los Alamos Astro Seminar & Invited & LANL, NM, USA \\
+  2024.04 & BASS2024: New Horizons for Understanding Nearby AGN & Contrib. talk & Maryland, USA \\
+  2024.02 & 2024 Winter SKA-Korea Workshop & Contrib. talk & Busan, Korea \\
+  2023.12 & ICRAR Student Day, University of Western Australia & Seminar & Perth, Australia \\
+  2023.12 & University of Queensland Astro Group Seminar & Seminar & Brisbane, Australia \\
   2023.11 & EA-SKA Workshop 2023 & Contrib. talk & Jeju, Korea \\
   2023.10 & NRAO Wednesday Talk & Seminar & Socorro, NM, USA \\
+  2023.10 & KAS 2023 Fall & Poster & Jeju, Korea \\
   2023.03 & PHISCC 2023 & Contrib. talk & Cape Town, South Africa \\
+  2023.01 & SPHEREx AGN Workshop & Seminar & Cheonan, Korea \\
   2022.11 & The 6th Yonsei Astro Poster Jamboree (\emph{first place}) & Poster & Seoul, Korea \\
   2022.08 & IAU General Assembly 2022 & Poster & Busan, Korea \\
+  2022.07 & CGER1 Kick-off Meeting & Seminar & Gangneung, Korea \\
+  2022.02 & Env22 Workshop & Seminar & Online \\
+  2022.02 & ASIAA Galaxy Evolution Workshop 2021 & Poster & Online \\
+  2021.12 & The 5th Yonsei Astro Poster Jamboree & Poster & Online \\
   2021.10 & KAS 2021 Fall & Poster & Jeju, Korea \\
 \end{longtable}}
 
@@ -244,10 +279,12 @@ NRF: National Research Foundation of Korea; YU: Yonsei University.}
   \textbf{Date} & \textbf{Activity} & \textbf{Role} & \textbf{Location} \\[0.5ex]
   \endhead
   2026.12 & 2026 SKA-Korea Winter Workshop & Local Organizing Committee & Yonsei Univ., Korea \\
-  2025.11 & The 10th Astro Poster Jamboree & Chair of OC & Yonsei Univ., Korea \\
+  2025.11 & The 10th Astro Poster Jamboree & Chair of the Organizing Committee & Yonsei Univ., Korea \\
   2024.10 & The Fall Open House at the VLA & Science Staff & Socorro, NM, USA \\
-  2022.11 & The 6th Astro Poster Jamboree & Chair of OC & Yonsei Univ., Korea \\
+  2022.11 & The 6th Astro Poster Jamboree & Chair of the Organizing Committee & Yonsei Univ., Korea \\
   2022.08 & IAU General Assembly 2022 (40 hours) & Volunteer & Busan, Korea \\
+  2022.04 & KAS 2022 Spring & Volunteer & Busan, Korea \\
+  2018 & NASA Edu Camp, Incheon Science Elite Program & Mentor & US East Coast (New York, Washington DC, Boston), George Mason Univ.\ \& NASA Kennedy Space Center, FL \\
 \end{longtable}}
 
 \cvsubsection{Teaching Experience}
@@ -265,27 +302,34 @@ NRF: National Research Foundation of Korea; YU: Yonsei University.}
   2021 Spring & \emph{Introduction to Astrophysics (1)} & 2nd-year undergraduate & Teaching Assistant \\
 \end{longtable}}
 
-%% --- research skills -------------------------------------------------------
-\cvsection{Research Skills}
+%% --- schools ---------------------------------------------------------------
+\cvsection{Schools \& Workshops Attended}
 
 {\small
-\begin{longtable}{@{}L{0.22\textwidth}L{0.68\textwidth}@{}}
-  Programming languages & Python \\
-  Software & CASA, AIPS, GIPSY, 3D-Barolo, DRAGONS, SoFiA-2, MIRIAD (beginner) \\
+\begin{longtable}{@{}L{0.085\textwidth}L{0.52\textwidth}L{0.295\textwidth}@{}}
+  \textbf{Date} & \textbf{Name} & \textbf{Location} \\[0.5ex]
+  \endfirsthead
+  \textbf{Date} & \textbf{Name} & \textbf{Location} \\[0.5ex]
+  \endhead
+  2024.01 & 2024 SPHEREx-7DT Joint Workshop & Jecheon, Korea \\
+  2023.07 & The 7th ALMA Summer School & Seobaeksan Observatory, Korea \\
+  2023.05 & The 20th Synthesis Imaging School & Socorro, NM, USA \\
+  2022.10 & 9th VLA Data Reduction Workshop & Socorro, NM, USA \\
+  2021.07 & 2021 KIAS Summer School on Extragalactic Astronomy and Cosmology & Online \emph{(team awarded first place)} \\
 \end{longtable}}
 
 %% --- references ------------------------------------------------------------
 \cvsection{Academic References}
 
 {\small
-\begin{longtable}{@{}L{0.42\textwidth}L{0.28\textwidth}L{0.20\textwidth}@{}}
+\begin{longtable}{@{}L{0.26\textwidth}L{0.30\textwidth}L{0.34\textwidth}@{}}
   \textbf{Name} & \textbf{Affiliation} & \textbf{Contact} \\[0.5ex]
   \endfirsthead
   \textbf{Name} & \textbf{Affiliation} & \textbf{Contact} \\[0.5ex]
   \endhead
-  Prof.\ Aeree Chung & Yonsei University, S.Korea &
+  Prof.\ Aeree Chung & Yonsei University, Korea &
     \href{mailto:achung@yonsei.ac.kr}{achung@yonsei.ac.kr} \\
-  Dr.\ O. Ivy Wong & ATNF/CSIRO, Australia &
+  Dr.\ O. Ivy Wong & CSIRO, Australia &
     \href{mailto:ivy.wong@csiro.au}{ivy.wong@csiro.au} \\
 \end{longtable}}
 
