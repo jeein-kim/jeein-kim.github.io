@@ -60,9 +60,9 @@
   \cvneedspace{6\baselineskip}%  keep a heading with the first rows of its table
   \vspace{1.9ex}%
   \noindent{\fontsize{13}{15.6}\selectfont\bfseries
-    \hspace*{0.45em}\raisebox{0.12em}{\rotatebox[origin=c]{45}{\rule{0.35em}{0.35em}}}\hspace{0.4em}
+    \hspace*{0.45em}\raisebox{0.12em}{\rotatebox[origin=c]{45}{\rule{0.35em}{0.35em}}}\hspace{0.1em}
     {\addfontfeature{LetterSpace=3}\MakeUppercase{#2}}%
-    \hfill{\normalfont\small #1}}\par\vspace{0.5ex}%
+    \hfill{\normalfont\small\strut #1}}\par\vspace{0.5ex}%
   {\hrule height 1pt}\par\vspace{1.1ex}%
   \nopagebreak}
 
@@ -71,10 +71,11 @@
 %% mid-phrase the way a bare \hfill does.
 \newcommand{\sidenote}[1]{%
   \unskip\nobreak\hfill\penalty50\hskip1em\hbox{}\nobreak\hfill
-  {\footnotesize\color{notegrey}#1}}
+  \mbox{\footnotesize\color{notegrey}#1}}
 
 %% --- run-in sub-heading ----------------------------------------------------
 \newcommand{\cvsubsection}[1]{%
+  \cvneedspace{4\baselineskip}%  keep a sub-heading with its table
   \vspace{0.6ex}\noindent\hspace*{0.6em}\textbf{#1}\par\vspace{0.6ex}\nopagebreak}
 
 %% --- one CV row: date column on the left, content on the right -------------
@@ -123,7 +124,7 @@
 \end{minipage}
 \par\vspace{1.4ex}
 \noindent{\hrule height 1.2pt}
-\par\vspace{1.6ex}
+\par\vspace{3.5ex}
 
 %% --- education -------------------------------------------------------------
 \cvsection{Education}
@@ -142,12 +143,13 @@
   Observatory (NRAO), Socorro, NM, USA\sidenote{Host: Dr.\ Lilia Tremou}}
 
 \entry{2024.07 -- 2024.08}{\textbf{Visitor}, International Centre for Radio Astronomy
-  Research (ICRAR), University of Western Australia, Perth, Australia\sidenote{Host: Dr.\ O.\ Ivy Wong}}
+  Research (ICRAR) / University of Western Australia (UWA), Perth, Australia\sidenote{Host: Dr.\ O.\ Ivy Wong}}
 
-\entry{2023.11}{\textbf{Visitor}, CSIRO, Brisbane \& Perth, Australia\sidenote{Hosts: Dr.\ Chandra Murugeshan, Dr.\ O.\ Ivy Wong}}
+\entry{2023.11}{\textbf{Visitor}, Commonwealth Scientific and Industrial Research
+  Organisation (CSIRO), Brisbane / CSIRO, Perth, Australia\sidenote{Hosts: Dr.\ Chandra Murugeshan, Dr.\ O.\ Ivy Wong}}
 
 %% --- grants ---------------------------------------------------------------
-\cvsection{Grants, Awards, and Scholarships}
+\cvsection[\emph{(selected)}]{Grants, Awards, and Scholarships}
 
 {\small
 \begin{longtable}{@{}L{0.14\textwidth}L{0.50\textwidth}L{0.12\textwidth}L{0.13\textwidth}@{}}
@@ -162,8 +164,7 @@
   2020A & ICTL (YU) Tutoring Scholarship & Scholarship & \$0.2k \\
   2018A -- 2019A & YU International Campus RA Scholarship & Scholarship & \$7.0k \\
 \end{longtable}}
-\noindent{\footnotesize\color{notegrey}KRW/USD=1{,}200\\
-NRF: National Research Foundation of Korea; YU: Yonsei University.}
+\noindent{\footnotesize\color{notegrey}KRW/USD=1{,}200\hfill NRF: National Research Foundation of Korea; YU: Yonsei University.}
 
 
 %% --- publications ----------------------------------------------------------
@@ -173,8 +174,7 @@ NRF: National Research Foundation of Korea; YU: Yonsei University.}
   \item \textbf{J. Kim} et al. (2026), \emph{BASS: LI. Cool gas supply of \textsc{Hi}-massive
         local Seyfert galaxies}, A\&A, 708, A268
         \hfill\href{https://ui.adsabs.harvard.edu/abs/2026A\%26A...708A.268K/abstract}{[ADS]}
-  \item \textbf{J. Kim} et al., (working title) \emph{Caterpillar in a Cabbage: A Milky Way-Sized
-        \textsc{Hi} Reservoir Around an Optically Faint Dwarf Galaxy}, ApJ, in revision
+  \item \textbf{J. Kim} et al., (working title) \emph{Caterpillar in a Cabbage}, ApJ, in revision
   \item M. Parra Tello et al.\ incl.\ \textbf{J. Kim} (2025), \emph{BASS: XLIV. Morphological
         preferences of local hard X-ray selected AGNs}, A\&A, 700, A111
         \hfill\href{https://ui.adsabs.harvard.edu/abs/2025A\%26A...700A.111P/abstract}{[ADS]}
@@ -191,11 +191,11 @@ NRF: National Research Foundation of Korea; YU: Yonsei University.}
   \endfirsthead
   \textbf{Semester} & \textbf{Telescope} & \textbf{Proposal} & \textbf{ID / hours} \\[0.5ex]
   \endhead
-  2025B & Gemini-N/GMOS & \emph{Probing the Nature of an \textsc{Hi} Gas-Dominated Dwarf Galaxy Candidate via Long-Slit Spectroscopy} & 1.45 hr \\
+  2025B & Gemini-N/GMOS & \emph{Probing the Nature of an \textsc{Hi} Gas-Dominated Dwarf Galaxy Candidate via Long-Slit Spectroscopy} & GN-2025B-FT-201; 1.45 hr \\
   2025A & VLA/L-band & \emph{Probing \textsc{Hi} Gas Surrounding an X-ray AGN Host, NGC 3393} & 25A-343; 4.7 hr \\
   2023B & KVN single dish & \emph{$^{12}$CO (1--0) observations of 6 hard X-ray selected local AGN host galaxies} & 12 hr \\
   2023B & VLA/L-band & \emph{Probing \textsc{Hi} Gas Surrounding BASS AGN Host Galaxies} & 23B-079; 64 hr \\
-  2023A & JCMT/HARP & \emph{A CO (3--2) study of \textsc{Hi}-rich local X-ray AGN hosts} & 6.58 hr \\
+  2023A & JCMT/HARP & \emph{A CO (3--2) study of \textsc{Hi}-rich local X-ray AGN hosts} & E23AK003; 6.58 hr \\
 \end{longtable}}
 
 \cvsubsection{		As Co-Investigator}
@@ -207,7 +207,7 @@ NRF: National Research Foundation of Korea; YU: Yonsei University.}
   \textbf{Semester} & \textbf{Telescope} & \textbf{Proposal} & \textbf{ID / hours} \\[0.5ex]
   \endhead
   2026B & VLA/K-band & \emph{Expanding the Puzzle: A VLA Radio Atlas of the BAT AGN Legacy Survey} & 26B-213; 98.2 hr \\
-  2026B & Gemini-N/GMOS & \emph{A Long-Slit Spectroscopy Census of Dwarf Companions in Two Massive \textsc{Hi} Systems} & 4.47 hr \\
+  2026B & Gemini-N/GMOS & \emph{A Long-Slit Spectroscopy Census of Dwarf Companions in Two Massive \textsc{Hi} Systems} & GN-2026B-FT-202; 4.47 hr \\
 \end{longtable}}
 
 %% --- talks -----------------------------------------------------------------
@@ -235,7 +235,7 @@ NRF: National Research Foundation of Korea; YU: Yonsei University.}
 \end{longtable}}
 
 %% --- teaching --------------------------------------------------------------
-\cvsection{Community, Professional \& Services}
+\cvsection[\emph{(selected)}]{Community, Professional \& Services}
 
 {\small
 \begin{longtable}{@{}L{0.12\textwidth}L{0.33\textwidth}L{0.235\textwidth}L{0.22\textwidth}@{}}
