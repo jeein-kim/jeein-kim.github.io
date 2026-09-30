@@ -1269,3 +1269,9 @@
 		margin-top: 0.2em;
 		font-size: 0.9em;
 	}
+
+	/* Highlight the site owner's name in author lists */
+	.cv-page #main .pub-meta .me {
+		font-weight: 700;
+		border-bottom: 2px solid #000000;
+	}
