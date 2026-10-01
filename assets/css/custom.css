@@ -1275,3 +1275,16 @@
 		font-weight: 700;
 		border-bottom: 2px solid #000000;
 	}
+
+/* BASS-HI paper 1: size the two figures to a common height (aspect ratios 987x814 and 1000x1021) */
+@media screen and (min-width: 981px) {
+	.research-page #bass-hi .research-paper:first-of-type .research-figures {
+		flex-wrap: nowrap;
+	}
+		.research-page #bass-hi .research-paper:first-of-type .research-figure:nth-child(1) {
+			flex: 1.213 1 0;
+		}
+		.research-page #bass-hi .research-paper:first-of-type .research-figure:nth-child(2) {
+			flex: 0.979 1 0;
+		}
+}
