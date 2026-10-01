@@ -1288,3 +1288,16 @@
 			flex: 0.979 1 0;
 		}
 }
+
+/* Mobile-only type scale: one step below the base 12pt used at <=1280px.
+   Most sizes in this file and main.css are em-based, so they follow the body size. */
+@media screen and (max-width: 736px) {
+	body, input, select, textarea {
+		font-size: 11pt;
+	}
+}
+@media screen and (max-width: 360px) {
+	body, input, select, textarea {
+		font-size: 10.5pt;
+	}
+}
