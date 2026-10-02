@@ -1301,3 +1301,20 @@
 		font-size: 10.5pt;
 	}
 }
+
+/* --- Mobile type -----------------------------------------------------------
+   Slightly smaller body text and section titles on phones. */
+
+	@media screen and (max-width: 736px) {
+
+		body, input, select, textarea {
+			font-size: 11pt;
+		}
+
+		h1 { font-size: 1.6em; }
+		#header.alt h1 { font-size: 1.6em; }
+		h2 { font-size: 1.15em; }
+		h3 { font-size: 1.05em; }
+		h4 { font-size: 1em; }
+
+	}
