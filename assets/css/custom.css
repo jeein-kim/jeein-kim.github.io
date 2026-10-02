@@ -1308,13 +1308,13 @@
 	@media screen and (max-width: 736px) {
 
 		body, input, select, textarea {
-			font-size: 11pt;
+			font-size: 10pt;
 		}
 
-		h1 { font-size: 1.6em; }
-		#header.alt h1 { font-size: 1.6em; }
-		h2 { font-size: 1.15em; }
-		h3 { font-size: 1.05em; }
+		h1 { font-size: 1.5em; }
+		#header.alt h1 { font-size: 1.5em; }
+		h2 { font-size: 1.1em; }
+		h3 { font-size: 1em; }
 		h4 { font-size: 1em; }
 
 	}
