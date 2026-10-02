@@ -301,13 +301,13 @@
 		}
 
 		/* the LEDA 136976 write-up carries a single wide panel; at full column
-		   width it dwarfs the text, so hold it to 60% and centre it */
+		   width it dwarfs the text, so hold it to 80% and centre it */
 		.research-page #hi-dwarfs .research-figures {
 			justify-content: center;
 		}
 
 			.research-page #hi-dwarfs .research-figure {
-				flex: 0 1 60%;
+				flex: 0 1 80%;
 			}
 
 			#first .research-figure img,
@@ -1308,7 +1308,7 @@
 	@media screen and (max-width: 736px) {
 
 		body, input, select, textarea {
-			font-size: 10pt;
+			font-size: 13px;
 		}
 
 		h1 { font-size: 1.5em; }
