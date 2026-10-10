@@ -1289,6 +1289,22 @@
 		}
 }
 
+/* Desktop type scale: one step below main.css (17pt / 14pt / 12pt).
+   Must stay above the mobile blocks so those still win at <=736px. */
+body, input, select, textarea {
+	font-size: 14pt;
+}
+@media screen and (max-width: 1680px) {
+	body, input, select, textarea {
+		font-size: 12pt;
+	}
+}
+@media screen and (max-width: 1280px) {
+	body, input, select, textarea {
+		font-size: 11pt;
+	}
+}
+
 /* Mobile-only type scale: one step below the base 12pt used at <=1280px.
    Most sizes in this file and main.css are em-based, so they follow the body size. */
 @media screen and (max-width: 736px) {
@@ -1308,7 +1324,7 @@
 	@media screen and (max-width: 736px) {
 
 		body, input, select, textarea {
-			font-size: 13px;
+			font-size: 16px;
 		}
 
 		h1 { font-size: 1.5em; }
