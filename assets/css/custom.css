@@ -780,12 +780,19 @@
 		padding: 3.5em 4em 2em 4em;
 	}
 
-	@media screen and (min-width: 1600px) {
+	/* Match the rail's clamp(14.4em, 21.6%, 19.8em) exactly so the column never
+	   slides under it. #wrapper > #main is scaled to 0.82em, so its em values are
+	   divided by 0.82 to land on the same pixel width. */
+	.sidebar-layout #content {
+		margin-left: 21.6%;
+		margin-left: clamp(14.4em, 21.6%, 19.8em);
+	}
 
-		.sidebar-layout #content,
-		.sidebar-layout #wrapper > #main {
-			margin-left: 19.8em;
-		}
+	.sidebar-layout #wrapper > #main {
+		margin-left: 21.6%;
+		margin-left: clamp(17.56em, 21.6%, 24.15em);
+	}
+
 
 	}
 
