@@ -878,6 +878,14 @@
 				border-radius: 0.25em;
 			}
 
+		.content-image .photo-credit {
+			margin: 0.3em 0 0 0;
+			text-align: right;
+			font-size: 0.55em;
+			font-style: italic;
+			line-height: 1;
+		}
+
 /* --- tablet and phone: the rail unwraps -------------------------------------
    Desktop is untouched below 981px and above. Here the identity block becomes
    a banner, the page content follows it, and the contact block drops to the
@@ -1272,6 +1280,12 @@
 	}
 
 	.cv-page #main .pub-meta {
+		display: block;
+		margin-top: 0.2em;
+		font-size: 0.9em;
+	}
+
+	.cv-page #main .pub-journal {
 		display: block;
 		margin-top: 0.2em;
 		font-size: 0.9em;
