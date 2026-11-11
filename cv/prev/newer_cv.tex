@@ -1,0 +1,462 @@
+\documentclass[12pt,letterpaper]{article}
+% \documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[left=2.0cm,right=2.0cm,top=1.5cm,bottom=1.5cm,footskip=0.75cm]{geometry}
+% a4paper,
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage[font=small,labelfont=bf,skip=3pt]{caption}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{titlesec}
+\usepackage{amsgen}
+\usepackage{xcolor}
+\usepackage{natbib}
+\usepackage{multicol}
+\usepackage{wrapfig}
+\usepackage{array}
+\usepackage{longtable}
+\setcitestyle{authoryear,round,aysep={},yysep={,}}
+\usepackage[colorlinks=true,citecolor=sectionblue,urlcolor=sectionblue,linkcolor=sectionblue]{hyperref}
+
+\providecommand{\mnras}{MNRAS}
+\providecommand{\apj}{ApJ}
+\providecommand{\apjl}{ApJ}
+\providecommand{\apjs}{ApJS}
+\providecommand{\aj}{AJ}
+\providecommand{\aap}{A\&A}
+\providecommand{\nat}{Nature}
+\providecommand{\pasa}{PASA}
+
+\definecolor{sectionblue}{HTML}{103A63}
+\definecolor{persongreen}{HTML}{2E7D4F}
+\definecolor{darkgreen}{HTML}{14482A}
+\definecolor{rulegrey}{HTML}{B0B0B0}
+\definecolor{notegrey}{HTML}{4A4A4A}
+\hypersetup{pdftitle={MPIA Galaxies and Cosmology postdoc application (Ref. 432) -- Jeein Kim},pdfauthor={Jeein Kim}}
+
+% keep footnotes at 11 pt (call asks for >= 11 pt)
+\makeatletter
+\renewcommand\footnotesize{\@setfontsize\footnotesize{11}{13}}
+\makeatother
+
+\titleformat{\section}{\fontsize{13}{13}\selectfont\bfseries\color{sectionblue}}{}{0pt}{\raisebox{0.1em}{\rule{0.4em}{0.4em}}\hspace{0.5em}}
+\titlespacing*{\section}{0pt}{1.0ex}{0.5ex}
+\makeatletter
+\titleformat{\subsection}[runin]{\normalsize\bfseries}{}{0pt}{}[\@addpunct{.}]
+\makeatother
+\titlespacing*{\subsection}{0pt}{0.8ex}{0.6em}
+
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{0.25ex}
+\setlist{nosep,leftmargin=1.4em}
+
+\newcommand{\HI}{H\,\textsc{i}}
+\newcommand{\Msun}{M_\odot}
+\newcommand{\todo}[1]{\textcolor{red}{[#1]}}
+\newcommand{\srcname}{BASSHI15}
+\newcommand{\doctitle}[2][]{%
+  {\centering{\LARGE\bfseries #2}%
+   \if\relax\detokenize{#1}\relax\else\\[0.3ex]{\large #1}\fi\par}}
+
+%% --- CV helpers -------------------------------------------------------------
+\setlength{\LTpre}{0pt}
+\setlength{\LTpost}{\medskipamount}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcommand{\person}[1]{{\color{persongreen}#1}}
+\newcommand{\monthname}{\ifcase\month\or Jan\or Feb\or Mar\or Apr\or May\or Jun\or
+   Jul\or Aug\or Sep\or Oct\or Nov\or Dec\fi}
+\newcommand{\lastupdate}{Last update: \monthname\ \the\year}
+\newcommand{\cvneedspace}[1]{%
+  \dimen0=#1\relax
+  \ifdim\pagegoal=\maxdimen\else
+    \ifdim\dimen0>\dimexpr\pagegoal-\pagetotal\relax\newpage\fi
+  \fi}
+\newcommand{\cvsectionspace}{10\baselineskip}
+\newcommand{\cvsection}[2][]{%
+  \cvneedspace{\cvsectionspace}%
+  \vspace{1.9ex}%
+  \noindent{\color{darkgreen}\fontsize{13}{15.6}\selectfont\bfseries
+    \hspace*{0.45em}\raisebox{0.05em}{\rotatebox[origin=c]{45}{\rule{0.5em}{0.5em}}}\hspace{0.3em}
+    \textls[80]{\MakeUppercase{#2}}%
+    \hfill{\normalfont\normalsize\strut #1}}\par\vspace{0.5ex}%
+  {\color{darkgreen}\hrule height 1pt}\par\vspace{1.1ex}%
+  \nopagebreak}
+\newcommand{\cvsubsection}[1]{%
+  \vspace{0.6ex}\noindent\hspace*{0.6em}%
+  {\color{darkgreen}\raisebox{0.1em}{\rule{0.35em}{0.35em}}\hspace{0.5em}\textbf{#1}}%
+  \par\vspace{0.6ex}\nopagebreak}
+\newcommand{\cvsubsub}[1]{%
+  \vspace{0.4ex}\noindent\hspace*{1.8em}%
+  {\color{persongreen}\textbullet\hspace{0.45em}\textbf{#1}}%
+  \par\vspace{0.3ex}\nopagebreak}
+\newcommand{\sidenote}[1]{%
+  \unskip\nobreak\hfill\hskip0.5em\hbox{}\nobreak\hfill
+  {\normalsize\color{notegrey}\mbox{#1}}}
+\newlength{\datewidth}\setlength{\datewidth}{0.195\textwidth}
+\newlength{\progap}\setlength{\progap}{1.5mm}
+\newcommand{\entry}[2]{%
+  \noindent\begin{minipage}[t]{\datewidth}\raggedright\normalsize #1\end{minipage}%
+  \hfill%
+  \begin{minipage}[t]{\dimexpr\textwidth-\datewidth-0.4em\relax}#2\end{minipage}%
+  \par\vspace{0.7ex}}
+\newcounter{cvlistctr}
+\newenvironment{cvlist}%
+  {\begin{list}{\arabic{cvlistctr}.}%
+     {\usecounter{cvlistctr}%
+      \setlength{\leftmargin}{1.6em}\setlength{\labelwidth}{1.2em}%
+      \setlength{\labelsep}{0.4em}\setlength{\itemsep}{0.7ex}%
+      \setlength{\topsep}{0.4ex}\setlength{\parsep}{0pt}}}%
+  {\end{list}}
+
+\pagestyle{plain}
+
+\begin{document}
+
+%% ===========================================================================
+%%  1. COVER LETTER -- 1 page
+%% ===========================================================================
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.7ex}
+
+===========================================================================
+%%  2. CV
+%% ===========================================================================
+\clearpage
+\newgeometry{top=0.5in,left=0.5in,right=0.5in,bottom=0.6in,footskip=0.4in}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\doctitle{Curriculum Vitae}
+
+\noindent
+\begin{minipage}[t]{0.52\textwidth}
+  \raggedright\normalsize
+  \vspace{0pt}
+  \textbf{Ph.D. Candidate}\\
+  Department of Astronomy\\
+  Yonsei University\\
+  \href{https://jeein-kim.github.io}{jeein-kim.github.io}
+\end{minipage}%
+\begin{minipage}[t]{0.48\textwidth}
+  \raggedleft\normalsize
+  {\LARGE\bfseries Jeein Kim}\\[0.5\baselineskip]
+  \href{mailto:jikim.astro@gmail.com}{jikim.astro@gmail.com}\\[0.1\baselineskip]
+  \href{https://orcid.org/0000-0002-3170-7434}{ORCID 0000-0002-3170-7434}\\
+  {\color{notegrey}\emph{\lastupdate}}
+\end{minipage}
+
+\par\vspace{1.0ex}
+\noindent{\hrule height 1.2pt}
+\par\vspace{1.6ex}
+
+\cvsection{Research Interests}
+I study galaxy evolution through neutral atomic hydrogen (\HI{}), asking how galaxies gather, keep and lose the gas that fuels both the galaxies themselves and their active galactic nuclei (AGN) on kpc-to-Mpc scales. Throughout my PhD I have worked directly from visibilities with three connected arrays (VLA, ATCA and GMRT), from calibration and continuum subtraction to imaging, source finding, verification and kinematic modeling. I have also worked with \HI\ data from almost all connected arrays (e.g., WSRT, MeerKAT and ASKAP).
+
+\vspace{3mm}
+
+\noindent\textbf{Science.} Galaxy evolution, cold atomic gas (\HI{}), gas accretion and AGN fueling (kpc--Mpc scales), \HI{} absorption toward AGN, low surface brightness and optically dark galaxies, resolved \HI{} kinematics, SKA-era \HI{} surveys.\\[0.5ex]
+\noindent\textbf{Methods.} Interferometric \HI{} line and continuum imaging, 3D kinematic modeling, \HI{} source finding, optical long-slit spectroscopy.
+
+\cvsection{Education}
+\entry{2021.03 -- present}{\textbf{Ph.D. in Astronomy}, Yonsei University, Seoul, S.\ Korea\\
+  {\normalsize Thesis: \emph{Resolved Neutral Hydrogen Properties of Local Hard X-ray Selected
+   Active Galactic Nuclei Host Galaxies} (degree expected 2027.08)\sidenote{\person{Advisor: Prof.\ Aeree Chung}}}}
+\vspace{0.2mm}
+\entry{2016.03 -- 2021.02}{\textbf{B.S. in Astronomy}, Yonsei University, Seoul, S.\ Korea\\
+  {\normalsize Minor in Electrical \& Electronic Engineering}}
+
+\cvsection{Research Experience}
+\entry{2024.03 -- 2025.02}{\textbf{Visiting Scholar}, National Radio Astronomy
+  Observatory (NRAO), Socorro, NM, USA\sidenote{\person{Host: Dr.\ Lilia Tremou}}}
+\vspace{0.2mm}
+\entry{2024.07 -- 2024.08}{\textbf{Visitor}, International Centre for Radio Astronomy
+  Research (ICRAR) / University of Western Australia (UWA), Perth, Australia\sidenote{\person{Host: Dr.\ O.\ Ivy Wong}}}
+\vspace{0.2mm}
+\entry{2023.11}{\textbf{Visitor}, Commonwealth Scientific and Industrial Research
+  Organisation (CSIRO), Brisbane / CSIRO, Perth, Australia\sidenote{\person{Hosts: Dr.\ C.\ Murugeshan, Dr.\ O.\ I.\ Wong}}}
+
+\cvsection[\href{https://ui.adsabs.harvard.edu/public-libraries/KmjWaYBAQIKqrcffK59Q2g}{ADS library}]{Publications}
+
+\begin{cvlist}
+  \item \textbf{J. Kim}, A. Chung, O. I. Wong, et al. (2026), \emph{BASS LI. Cool gas supply of \HI{}-massive
+        local Seyfert galaxies}, A\&A, 708, A268
+        \hfill\href{https://ui.adsabs.harvard.edu/abs/2026A\%26A...708A.268K/abstract}{[ADS]}
+  \item \textbf{J. Kim}, A. Chung, S. Lim, T. Bang, \emph{Caterpillar in a Cabbage: A Milky Way-Sized
+        \HI{} Reservoir Around an LMC-analog Galaxy} (working title), ApJ, submitted
+  \item M. Parra Tello et al.\ incl.\ \textbf{J. Kim} (2025), \emph{BASS XLIV. Morphological
+        preferences of local hard X-ray selected AGNs}, A\&A, 700, A111
+        \hfill\href{https://ui.adsabs.harvard.edu/abs/2025A\%26A...700A.111P/abstract}{[ADS]}
+  \item Y. Díaz et al.\ incl.\ \textbf{J. Kim}, \emph{The 11.33\,$\mu$m PAH--22\,GHz radio connection in radio-quiet AGN}, A\&A, submitted
+  \noindent\textcolor{rulegrey}{\rule{\textwidth}{0.1pt}}
+  \item \textbf{J. Kim} et al., \emph{BASS-HI: resolved \HI{} imaging of $\sim$100 local
+        hard X-ray selected AGN hosts} (working title), in prep.
+\end{cvlist}
+
+\cvsection{Grants, Awards, and Scholarships}
+{\normalsize
+\setlength{\extrarowheight}{0.8mm}
+\begin{longtable}{@{}L{0.16\textwidth}L{0.45\textwidth}L{0.14\textwidth}L{0.15\textwidth}@{}}
+  \textbf{\color{persongreen}Date} & \textbf{\color{persongreen}Award} & \textbf{\color{persongreen}Type} & \textbf{\color{persongreen}Amount (EUR)} \\[0.5ex]
+  \endfirsthead
+  \textbf{\color{persongreen}Date} & \textbf{\color{persongreen}Award} & \textbf{\color{persongreen}Type} & \textbf{\color{persongreen}Amount (EUR)} \\[0.5ex]
+  \endhead
+  2026 & Cheolhyun Yeo Alumni Outstanding Graduate Student Paper Award (8th) & Award & \texteuro0.7k \\
+  2024 & \textbf{NRF/YU Overseas Training Support of Outstanding Graduate Students in the BK21 FOUR (Brain Korea 21 Four) Project} & Scholarship & \texteuro17.6k \\
+  2021 -- 2026 & NRF BK21 FOUR Project & Scholarship & \texteuro41.6k \\
+  2021 -- 2026 & YU Graduate Research Assistantship (GSRA) & Scholarship & \texteuro10.3k \\
+  2023B, 2024A & SKA-Korea Large Facility Program Grant & Travel & \texteuro6.3k \\
+  2021 -- 2023 & YU Teaching Assistantship (TA) & Scholarship & \texteuro7.6k \\
+  2021, 2022, 2023 & KAS Volunteer Scholarship & Scholarship & \texteuro1.0k \\
+  \noalign{\vskip0.4ex{\color{rulegrey}\hrule height 0.3pt}\vskip0.8ex}
+  2020B & IHEI (YU) Innovation Support Scholarship & Award & \texteuro0.9k \\
+  2020A & ICTL (YU) Tutoring Scholarship & Scholarship & \texteuro0.2k \\
+  2018A -- 2019A & YU International Campus RA Scholarship & Scholarship & \texteuro5.5k \\
+  2017A -- 2017B & YU Volunteer Scholarship & Scholarship & \texteuro1.0k \\
+\end{longtable}}
+{\footnotesize\color{notegrey}Amounts converted from KRW at 1{,}500~KRW per EUR.\\[0.2mm]
+NRF: National Research Foundation of Korea; YU: Yonsei University; KAS: Korean Astronomical Society; IHEI: Institute for Higher Education Innovation; ICTL: Innovation Center for Teaching and Learning.}
+
+\vspace{10mm}
+
+\cvsection{Successful Observing Proposals}
+\cvsubsection{As Principal Investigator (88.73~hr)}
+\vspace{1.5mm}
+{\normalsize
+\setlength{\extrarowheight}{0.8mm}
+\begin{longtable}{@{}L{0.08\textwidth}L{0.17\textwidth}L{0.64\textwidth}L{0.07\textwidth}@{}}
+  \textbf{\color{persongreen}Semester} & \textbf{\color{persongreen}Telescope} & \textbf{\color{persongreen}[Program ID] Proposal} & \textbf{\color{persongreen}Hours} \\[0.5ex]
+  \endfirsthead
+  \textbf{\color{persongreen}Semester} & \textbf{\color{persongreen}Telescope} & \textbf{\color{persongreen}[Program ID] Proposal} & \textbf{\color{persongreen}Hours} \\[0.5ex]
+  \endhead
+  2025B & \textbf{Gemini-N/GMOS} & \textbf{[GN-2025B-FT-201]} \emph{Probing the Nature of an \HI{} Gas-Dominated Dwarf Galaxy Candidate via Long-Slit Spectroscopy} & 1.45 hr \\
+  2025A & \textbf{VLA/L-band} & \textbf{[25A-343]} \emph{Probing \HI{} Gas Surrounding an X-ray AGN Host, NGC 3393} & 4.7 hr \\
+  2023B & \textbf{KVN single dish} & \emph{$^{12}$CO (1--0) observations of 6 hard X-ray selected local AGN host galaxies} & 12 hr \\
+  2023B & \textbf{VLA/L-band} & \textbf{[23B-079]} \emph{Probing \HI{} Gas Surrounding BASS AGN Host Galaxies} & 64 hr \\
+  2023A & \textbf{JCMT/HARP} & \textbf{[E23AK003]} \emph{A CO (3--2) study of \HI{}-rich local X-ray AGN hosts} & 6.58 hr \\
+\end{longtable}}
+
+\vspace{7mm}
+
+% \cvsubsection{As Co-Investigator (102.67~hr)}
+% \vspace{1.5mm}
+% {\normalsize
+% \setlength{\extrarowheight}{0.8mm}
+% \begin{longtable}{@{}L{0.08\textwidth}L{0.17\textwidth}L{0.64\textwidth}L{0.07\textwidth}@{}}
+%   \textbf{\color{persongreen}Semester} & \textbf{\color{persongreen}Telescope} & \textbf{\color{persongreen}[Program ID] Proposal} & \textbf{\color{persongreen}Hours} \\[0.5ex]
+%   \endfirsthead
+%   \textbf{\color{persongreen}Semester} & \textbf{\color{persongreen}Telescope} & \textbf{\color{persongreen}[Program ID] Proposal} & \textbf{\color{persongreen}Hours} \\[0.5ex]
+%   \endhead
+%   2026B & \textbf{VLA/K-band} & \textbf{[26B-213]} \emph{Expanding the Puzzle: A VLA Radio Atlas of the BAT AGN Legacy Survey} & 98.2 hr \\
+%   2026B & \textbf{Gemini-N/GMOS} & \textbf{[GN-2026B-FT-202]} \emph{A Long-Slit Spectroscopy Census of Dwarf Companions in Two Massive \HI{} Systems} & 4.47 hr \\
+% \end{longtable}}
+
+\cvsubsection{As Co-Investigator (116.79~hr)}
+\vspace{1.5mm}
+{\normalsize
+\setlength{\extrarowheight}{0.8mm}
+\begin{longtable}{@{}L{0.08\textwidth}L{0.17\textwidth}L{0.63\textwidth}L{0.08\textwidth}@{}}
+  \textbf{\color{persongreen}Semester} & \textbf{\color{persongreen}Telescope} & \textbf{\color{persongreen}[Program ID] Proposal} & \textbf{\color{persongreen}Hours} \\[0.5ex]
+  \endfirsthead
+  \textbf{\color{persongreen}Semester} & \textbf{\color{persongreen}Telescope} & \textbf{\color{persongreen}[Program ID] Proposal} & \textbf{\color{persongreen}Hours} \\[0.5ex]
+  \endhead
+  2027A & \textbf{VLA/L-band} & \textbf{[27A-118]} \emph{Understanding the AGN-driven Outflow in NGC 1106 through \HI{} Absorption} & 14.12 hr \\
+  2026B & \textbf{VLA/K-band} & \textbf{[26B-213]} \emph{Expanding the Puzzle: A VLA Radio Atlas of the BAT AGN Legacy Survey} & 98.2 hr \\
+  2026B & \textbf{Gemini-N/GMOS} & \textbf{[GN-2026B-FT-202]} \emph{A Long-Slit Spectroscopy Census of Dwarf Companions in Two Massive \HI{} Systems} & 4.47 hr \\
+\end{longtable}}
+
+\cvsection{Talks \& Posters}
+\cvsubsection{Oral Talks}
+\cvsubsub{Conference contributed}
+\vspace{1mm}
+{\normalsize
+\begin{longtable}{@{}L{0.10\textwidth}L{0.58\textwidth}L{0.26\textwidth}@{}}
+  2027.01 & \textbf{AAS 249 Winter Meeting} (accepted) & Salt Lake City, UT, USA \\
+  2026.08 & K-GMT Science Program Users Meeting 2026 & Daejeon, S.\ Korea \\
+  2025.09 & \textbf{PHISCC 2025} & Cagliari, Italy \\
+  2025.04 & KAS 2025 Spring & Gyeongju, S.\ Korea \\
+  2024.11 & 40th Annual New Mexico Symposium & Socorro, NM, USA \\
+  2024.04 & BASS2024: New Horizons for Understanding Nearby AGN & Maryland, USA \\
+  2024.02 & 2024 Winter SKA-Korea Workshop & Busan, S.\ Korea \\
+  2023.11 & EA-SKA Workshop 2023 & Jeju, S.\ Korea \\
+  2023.03 & \textbf{PHISCC 2023} & Cape Town, S.\ Africa \\
+\end{longtable}}
+\cvsubsub{Seminar, invited}
+\vspace{0.5mm}
+{\normalsize
+\begin{longtable}{@{}L{0.10\textwidth}L{0.58\textwidth}L{0.26\textwidth}@{}}
+  2024.07 & Los Alamos Astro Seminar & LANL, NM, USA \\
+\end{longtable}}
+\cvsubsub{Informal talks}
+\vspace{0.5mm}
+{\normalsize
+\begin{longtable}{@{}L{0.10\textwidth}L{0.58\textwidth}L{0.26\textwidth}@{}}
+  2024.08 & ICRAR-UWA Seminar & Perth, Australia \\
+  2023.12 & ICRAR Student Day, University of Western Australia & Perth, Australia \\
+  2023.12 & University of Queensland Astro Group Seminar & Brisbane, Australia \\
+  2023.10 & NRAO Wednesday Talk & Socorro, NM, USA \\
+  2023.01 & SPHEREx AGN Workshop & Cheonan, S.\ Korea \\
+  2022.07 & CGER1 Kick-off Meeting & Gangneung, S.\ Korea \\
+  2022.02 & Env22 Workshop & Online \\
+\end{longtable}}
+\cvsubsection{Posters}
+\vspace{1mm}
+{\normalsize
+\begin{longtable}{@{}L{0.10\textwidth}L{0.58\textwidth}L{0.26\textwidth}@{}}
+  2026.11 & ngVLA International Science Conference 2026 & Sendai, Japan \\
+  2026.02 & \textbf{Asia-Pacific SKA Science Meeting 2026} & Chiang Mai, Thailand \\
+  2023.10 & KAS 2023 Fall & Jeju, S.\ Korea \\
+  2022.11 & The 6th Yonsei Astro Poster Jamboree (\emph{first place}) & Seoul, S.\ Korea \\
+  2022.08 & IAU General Assembly 2022 & Busan, S.\ Korea \\
+  2022.02 & ASIAA Galaxy Evolution Workshop 2021 & Online \\
+  2021.12 & The 5th Yonsei Astro Poster Jamboree & Online \\
+  2021.10 & KAS 2021 Fall & Jeju, S.\ Korea \\
+\end{longtable}}
+
+\cvsection{Research Skills}
+{\normalsize
+\begin{longtable}{@{}L{0.22\textwidth}L{0.75\textwidth}@{}}
+  Interferometric \HI{} & Calibration and imaging of spectral \HI\ cubes from connected arrays (e.g., VLA, ATCA, GMRT);
+    multi-configuration combination; source finding (SoFiA-2) \\
+  Kinematics \& modeling & 3D tilted-ring modeling (3D-Barolo) \\
+  Optical spectroscopy & Long-slit reduction and emission-line analysis (Gemini DRAGONS) \\
+  Programming & Python3 \\
+  Software & CASA, AIPS, GIPSY, MIRIAD (beginner) \\
+  Languages & Korean (native); English (working language); Korean Sign Language (intermediate); Japanese (basic--intermediate); Chinese (beginner) \\
+\end{longtable}}
+
+\cvsection{Community, Professional \& Service}
+{\normalsize
+\begin{longtable}{@{}L{0.10\textwidth}L{0.35\textwidth}L{0.28\textwidth}L{0.25\textwidth}@{}}
+  \textbf{\color{persongreen}Date} & \textbf{\color{persongreen}Activity} & \textbf{\color{persongreen}Role} & \textbf{\color{persongreen}Location} \\[0.5ex]
+  \endfirsthead
+  \textbf{\color{persongreen}Date} & \textbf{\color{persongreen}Activity} & \textbf{\color{persongreen}Role} & \textbf{\color{persongreen}Location} \\[0.5ex]
+  \endhead
+  2026.12 & 2026 SKA-Korea Winter Workshop & Local Organizing Committee & Yonsei Univ., S.\ Korea \\
+  2025.11 & The 10th Yonsei Astro Poster Jamboree & Chair, Organizing Committee & Yonsei Univ., S.\ Korea \\
+  2024.10 & Fall Open House, Very Large Array & Science staff & Socorro, NM, USA \\
+  2023.10 & KAS 2023 Fall & Volunteer & Jeju, S.\ Korea \\
+  2022.11 & The 6th Yonsei Astro Poster Jamboree & Chair, Organizing Committee & Yonsei Univ., S.\ Korea \\
+  2022.08 & IAU General Assembly 2022 & Volunteer, English interpretation desk (40 hours) & Busan, S.\ Korea \\
+  2022.04 & KAS 2022 Spring & Volunteer & Busan, S.\ Korea \\
+  2021.10 & KAS 2021 Fall & Volunteer & Jeju, S.\ Korea \\
+\end{longtable}}
+
+\vspace{0.1mm}
+
+\cvsubsection{Teaching Experience}
+{\normalsize
+\begin{longtable}{@{}L{0.15\textwidth}L{0.29\textwidth}L{0.28\textwidth}L{0.2\textwidth}@{}}
+  \textbf{\color{persongreen}Term} & \textbf{\color{persongreen}Course} & \textbf{\color{persongreen}Level} & \textbf{\color{persongreen}Role} \\[0.5ex]
+  \endfirsthead
+  \textbf{\color{persongreen}Term} & \textbf{\color{persongreen}Course} & \textbf{\color{persongreen}Level} & \textbf{\color{persongreen}Role} \\[0.5ex]
+  \endhead
+  2023 Spring & \emph{Radio Astronomy} & 4th-year undergraduate & Teaching Assistant \\
+  2022 Fall & \emph{Astrophysics (2)} & 4th-year undergraduate & Teaching Assistant \\
+  2022 Spring & \emph{Radio Astronomy} & 4th-year undergraduate & Teaching Assistant \\
+  2021 Fall & \emph{Understanding of Universe} & general education & Teaching Assistant \\
+  2021 Spring & \emph{Introduction to Astrophysics (1)} & 2nd-year undergraduate & Teaching Assistant \\
+\end{longtable}}
+
+\cvsubsection{Volunteer \& Outreach Experience}
+{\normalsize
+\begin{longtable}{@{}L{0.162\textwidth}L{0.53\textwidth}L{0.30\textwidth}@{}}
+  \textbf{\color{persongreen}Date / Role} & \textbf{\color{persongreen}Activity} & \textbf{\color{persongreen}Location} \\[0.5ex]
+  \endfirsthead
+  \textbf{\color{persongreen}Date / Role} & \textbf{\color{persongreen}Activity} & \textbf{\color{persongreen}Location} \\[0.5ex]
+  \endhead
+  2026.04 -- present \newline Volunteer & Community knitting program with Deaf participants \newline (15 sessions, 30 hrs) & Seodaemun Deaf Welfare Center, Seoul, S.\ Korea \\
+  2025.07 -- present \newline Volunteer & Event and program support for the Deaf community, including a Deaf sports day, a disability awareness booth, and dementia-prevention programs at a Deaf shelter \newline (20 sessions, 69 hrs) & Seodaemun-gu Sign Language Interpreting Center, Seoul, S.\ Korea \\
+  2018.01, 2018.08 \newline Mentor & NASA Edu Camp, Incheon Science Elite Youth Program \newline Two weeks each: New York, Washington DC, Boston; NASA Kennedy Space Center, FL, USA & USA \\
+  2015.11 -- 2022.09 \newline Volunteer & Other volunteering, including a dishwashing program funding meals for low-income students, middle-school mentoring and migrant-worker support in Incheon, and a charity bazaar for reconstructive facial surgery \newline (28 sessions, 90 hrs) & Seoul and Incheon, S.\ Korea \\
+  2012 -- 2014 \newline Mentor & Volunteer tutoring for siblings from a multicultural family & Dream School, Seosan, Chungcheongnam-do, S.\ Korea \\
+\end{longtable}}
+
+\vspace{0.5mm}
+
+\cvsection{Schools \& Workshops Attended}
+{\normalsize
+\begin{longtable}{@{}L{0.10\textwidth}L{0.50\textwidth}L{0.31\textwidth}@{}}
+  \textbf{\color{persongreen}Date} & \textbf{\color{persongreen}Name} & \textbf{\color{persongreen}Location} \\[0.5ex]
+  \endfirsthead
+  \textbf{\color{persongreen}Date} & \textbf{\color{persongreen}Name} & \textbf{\color{persongreen}Location} \\[0.5ex]
+  \endhead
+  2024.05 & The 20th Synthesis Imaging School & Socorro, NM, USA \\
+  % 2024.01 & 2024 SPHEREx-7DT Joint Workshop & Jecheon, S.\ Korea \\
+  % 2023.07 & The 7th ALMA Summer School & Seobaeksan Observatory, S.\ Korea \\
+  2022.10 & 9th VLA Data Reduction Workshop & Socorro, NM, USA \\
+  2021.07 & 2021 KIAS Summer School on Extragalactic Astronomy and Cosmology & Online \emph{(team awarded first place)} \\
+\end{longtable}}
+
+%% --- back to MPIA margins for the publication list and research statement ---
+\clearpage
+\newgeometry{left=2.0cm,right=2.0cm,top=1.5cm,bottom=1.5cm,footskip=0.75cm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8ex}
+% ===========================================================================
+
+% \clearpage
+% \pagestyle{plain}
+% \newgeometry{left=2.0cm,right=2.0cm,top=1.5cm,bottom=1.5cm,footskip=0.75cm}
+% % \newgeometry{left=0.9in,right=0.9in,top=0.8in,bottom=0.8in,footskip=0.35in}
+% % \usepackage[a4paper,left=2.0cm,right=2.0cm,top=1.5cm,bottom=1.5cm,footskip=0.75cm]{geometry}
+% \setlength{\parindent}{0pt}
+% \setlength{\parskip}{0.8ex}
+
+
+%% ===========================================================================
+%%  3. PUBLICATION LIST
+%% ===========================================================================
+\clearpage
+\doctitle{Publication List}
+\vspace{1ex}
+{\centering\normalsize Jeein Kim \quad\textbullet\quad
+ \href{https://ui.adsabs.harvard.edu/public-libraries/KmjWaYBAQIKqrcffK59Q2g}{ADS library}
+ \quad\textbullet\quad
+ \href{https://orcid.org/0000-0002-3170-7434}{ORCID 0000-0002-3170-7434}\par}
+
+\vspace{4mm}
+
+\cvsection{Refereed Publications, Published}
+\cvsubsection{First author}
+\begin{cvlist}
+  \item \emph{BASS LI. Cool gas supply of \HI{}-massive local Seyfert galaxies} (2026), A\&A, 708, A268\\
+        \textbf{J. Kim}, A. Chung, O. I. Wong, J. Baek, C. Murugeshan, M. J. Koss, K. Oh, F. E. Bauer, C.-S. Chang, Y. Díaz, K. Ichikawa, D. Kakkad, M. Kim, M. Magno, I. del Moral-Castro, R. Mushotzky, A. Peca, C. Ricci, M. Signorini, M. Parra Tello, B. Trakhtenbrot, J.-H. Woo
+        \hfill\href{https://ui.adsabs.harvard.edu/abs/2026A\%26A...708A.268K/abstract}{[ADS]}
+\end{cvlist}
+\vspace{2mm}
+\cvsubsection{Co-author}
+\begin{cvlist}
+  \setcounter{cvlistctr}{1}
+  \item \emph{BASS XLIV. Morphological preferences of local hard X-ray selected AGNs} (2025), A\&A, 700, A111\\
+        M. Parra Tello, F. E. Bauer, D. De Cicco, G. Doll, M. Koss, E. Treister, C. Finlez, M. Troncoso, C. Auge, I. del Moral-Castro, A. Chung, K. K. Gupta, \textbf{J. Kim}, K. Oh, C. Ricci, F. Ricci, A. Rojas, T. Caglar, F. Harrison, M. C. Powell, D. Stern, B. Trakhtenbrot, C. Megan Urry
+        \hfill\href{https://ui.adsabs.harvard.edu/abs/2025A\%26A...700A.111P/abstract}{[ADS]}
+\end{cvlist}
+
+\vspace{10mm}
+
+\cvsection{Submitted to Refereed Journals}
+\cvsubsection{First author}
+\begin{cvlist}
+  \setcounter{cvlistctr}{2}
+  \item \emph{Caterpillar in a Cabbage: A Milky Way-Sized \HI{} Reservoir Around an LMC-analog Galaxy} (working title), ApJ, submitted\\
+        \textbf{J. Kim}, A. Chung, S. Lim, T. Bang
+\end{cvlist}
+\vspace{2mm}
+\cvsubsection{Co-author}
+\begin{cvlist}
+  \setcounter{cvlistctr}{3}
+  \item \emph{The 11.33\,$\mu$m PAH--22\,GHz radio connection in radio-quiet AGN}, A\&A, submitted\\
+        Y. Díaz, M. Magno, C. Ricci, E. Shablovinskaia, K. Oh, K. Ichikawa, K. L. Smith, A. Rojas Lilayú, K. K. Gupta, A. Tortosa, I. García-Bernete, L. Hernández-García, M. Stalevski, A. Jana, I. del Moral-Castro, P. Arévalo, N. Viaux, E. Paz-Godoy, F. Carvajal, G. Dimopoulos, A. Peca, S. M. Venselaar, R. Serafinelli, \textbf{J. Kim}, A. Chung, M. Koss, B. Trakhtenbrot, D. B. Sanders
+\end{cvlist}
+
+\vspace{2mm}
+
+\cvsection{In Preparation}
+\begin{cvlist}
+  \setcounter{cvlistctr}{4}
+  \item \emph{BASS-HI: resolved \HI{} imaging of $\sim$100 local hard X-ray selected AGN hosts} (working title), \textbf{in prep.}\\
+        \textbf{J. Kim} et al.
+\end{cvlist}
+:
